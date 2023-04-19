@@ -4,9 +4,9 @@ Proyecto-Final-ISPC-G1-V2
 
 [Repositorio Github] (https://github.com/Easy1089/Proyecto-Fullstack-ISPC-G1) 
 
-Link a Wiki
-[GitHub Pages] (https://github.com/Easy1089/Proyecto-Fullstack-ISPC-G1)) 
+##Link a Wiki
+[Wiki del Proyecto] () 
 
-Link a proyecto Kanban
-[GitHub Pages] (https://github.com/Easy1089/Proyecto-Fullstack-ISPC-G1)) 
+###Link a proyecto Kanban
+[Proyecto Kanban] () 
 
