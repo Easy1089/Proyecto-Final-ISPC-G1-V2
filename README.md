@@ -14,6 +14,8 @@
 - Dalma Ponce: Analista, diseñador y programador
 - Salvador Beron:Analista, diseñador y programador
 
-***Link a repositorio de trabajo remoto del año pasado 2022*** (https://github.com/Easy1089/Proyecto-Fullstack-ISPC-G1) 
+***Link a repositorio de trabajo remoto del año pasado 2022*** 
+
+(https://github.com/Easy1089/Proyecto-Fullstack-ISPC-G1) 
 
 
