@@ -14,13 +14,13 @@ E-commerce de productos para Vinotecas.
 7.Dalma Ponce: Analista, diseñador y programador
 8.Salvador Beron:Analista, diseñador y programador
 
-Link a repositorio de trabajo remoto del año pasado 2022
+***Link a repositorio de trabajo remoto del año pasado 2022***
 
 [Repositorio Github] (https://github.com/Easy1089/Proyecto-Fullstack-ISPC-G1) 
 
-Link a Wiki
+***Link a Wiki***
 [Wiki del Proyecto] () 
 
-Link a proyecto Kanban
+***Link a proyecto Kanban**
 [Proyecto Kanban] () 
 
