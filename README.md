@@ -8,7 +8,7 @@
 - Fabiola Benitez: Scrum Master, Analista, diseñador y programador. Usuario de Github: Easy1089
 - Enzo Mateo Antunez: Analista, diseñador y programador
 - Marcelo Apaz: Analista, diseñador y programador
-- Melisa Apaz: Analista, diseñador y programador
+- Melisa Apaz: Analista, diseñador y programador. Usuario github: melisaapaz / e-mail: melisaapaz@gmail.com
 - Ana Eugenia Abregú: Analista, diseñador y programador
 - Jesica Amaya: Analista, diseñador y programador
 - Dalma Ponce: Analista, diseñador y programador
