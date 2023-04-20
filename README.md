@@ -9,7 +9,7 @@
 - Enzo Mateo Antunez: Analista, diseñador y programador. Usuario De Github: MateoAntunez7
 - Marcelo Apaz: Analista, diseñador y programador
 - Melisa Apaz: Analista, diseñador y programador. Usuario Github: melisaapaz 
-- Ana Eugenia Abregú: Analista, diseñador y programador.Usuario github: AEugenia89
+- Ana Eugenia Abregú: Analista, diseñador y programador.Usuario Github: AEugenia89
 - Jesica Amaya: Analista, diseñador y programador
 - Dalma Ponce: Analista, diseñador y programador. Usuario Github: dalmaponce
 - Salvador Beron:Analista, diseñador y programador usuario Github: SalvadorBeron
