@@ -5,7 +5,7 @@
 
 **Personal involucrado**
 
-- Fabiola Benitez: Scrum Master, Analista, diseñador y programador
+- Fabiola Benitez: Scrum Master, Analista, diseñador y programador. Usuario de Github: Easy1089
 - Enzo Mateo Antunez: Analista, diseñador y programador
 - Marcelo Apaz: Analista, diseñador y programador
 - Melisa Apaz: Analista, diseñador y programador
