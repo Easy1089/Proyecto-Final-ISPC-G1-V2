@@ -10,7 +10,7 @@
 - Marcelo Apaz: Analista, diseñador y programador
 - Melisa Apaz: Analista, diseñador y programador. Usuario Github: melisaapaz 
 - Ana Eugenia Abregú: Analista, diseñador y programador.Usuario Github: AEugenia89
-- Jesica Amaya: Analista, diseñador y programador
+- Jesica Amaya: Analista, diseñador y programador Usuario Github: jesicaeamaya
 - Dalma Ponce: Analista, diseñador y programador. Usuario Github: dalmaponce
 - Salvador Beron:Analista, diseñador y programador usuario Github: SalvadorBeron
 
