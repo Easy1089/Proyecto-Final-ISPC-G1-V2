@@ -12,7 +12,7 @@
 - Ana Eugenia Abregú: Analista, diseñador y programador.Usuario github: AEugenia89
 - Jesica Amaya: Analista, diseñador y programador
 - Dalma Ponce: Analista, diseñador y programador. Usuario Github: dalmaponce
-- Salvador Beron:Analista, diseñador y programador
+- Salvador Beron:Analista, diseñador y programador usuario Github: SalvadorBeron
 
 ***Link a repositorio de trabajo remoto del año pasado 2022*** 
 
