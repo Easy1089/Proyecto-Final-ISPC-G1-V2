@@ -5,13 +5,15 @@ import { IndexComponent } from './components/index/index.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
   {path:'index',component: IndexComponent},
   {path:'login',component: LoginComponent},
   {path:'register',component: RegisterComponent},
-  {path:'catalogo',component: CatalogoComponent}
+  {path:'catalogo',component: CatalogoComponent},
+  {path:'footer',component: FooterComponent}
 ];
 
 @NgModule({
