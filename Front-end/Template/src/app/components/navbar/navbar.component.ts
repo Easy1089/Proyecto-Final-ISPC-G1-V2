@@ -19,5 +19,7 @@ export class NavbarComponent implements OnInit {
   register(){
     this.router.navigate(['/register'])
   }
-
+  catalogo(){
+    this.router.navigate(['/catalogo'])
+  }
 }
