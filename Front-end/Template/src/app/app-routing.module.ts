@@ -11,6 +11,7 @@ import { DescProductoComponent } from './components/desc-producto/desc-producto.
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ProductoComponent } from './components/producto/producto.component';
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path:'descripcionproducto',component: DescProductoComponent},
   {path:'contacto',component: ContactoComponent},
   {path:'about-me',component: AboutMeComponent},
-  {path:'header',component: HeaderComponent}
+  {path:'header',component: HeaderComponent},
+  {path:'producto',component: ProductoComponent}
 ];
 
 @NgModule({
