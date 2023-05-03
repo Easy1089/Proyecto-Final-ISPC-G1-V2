@@ -10,6 +10,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     RegisterComponent,
     CatalogoComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
