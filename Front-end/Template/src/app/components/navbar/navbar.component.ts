@@ -25,4 +25,8 @@ export class NavbarComponent implements OnInit {
   contacto() {
     this.router.navigate(['/contacto'])
   }
+
+  aboutme() {
+    this.router.navigate(['/about-me'])
+  }
 }
