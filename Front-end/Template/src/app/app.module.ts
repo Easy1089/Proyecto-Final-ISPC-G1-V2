@@ -15,6 +15,7 @@ import { DescProductoComponent } from './components/desc-producto/desc-producto.
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ProductoComponent } from './components/producto/producto.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HeaderComponent } from './components/header/header.component';
     DescProductoComponent,
     ContactoComponent,
     AboutMeComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
