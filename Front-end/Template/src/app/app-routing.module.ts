@@ -7,6 +7,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
+import { DescProductoComponent } from './components/desc-producto/desc-producto.component';
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
@@ -15,7 +16,9 @@ const routes: Routes = [
   {path:'register',component: RegisterComponent},
   {path:'catalogo',component: CatalogoComponent},
   {path:'footer',component: FooterComponent},
-  {path:'checkout',component: CarritoComponent}
+  {path:'checkout',component: CarritoComponent},
+  {path:'checkout',component: CarritoComponent},
+  {path:'descripcionproducto',component: DescProductoComponent}
 ];
 
 @NgModule({
