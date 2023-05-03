@@ -1,20 +1,21 @@
 <nav id="barra-navegacion" class=" navbar navbar-expand-lg">
-    <div class="container-fluid seccion-roja centrado-navbar">
-      <a class="navbar-brand" href="#"><img id="imagen-inicio" src="../../../assets/img/navbar/icon.png" alt=""></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a href="#" class="ov-btn-grow-box">Inicio</a>
-          <a href="#" class="ov-btn-grow-box">Acerca de</a>     
-          <a routerLink="../catalogo" class="ov-btn-grow-box">Catálogo</a>
-          <a href="#contacto" class="ov-btn-grow-box">Contacto</a>
-        </div>
-        <div id="botones">
-        <button type="button" class="ov-btn-grow-box" (click)="login()" >Login</button>
+  <div class="container-fluid seccion-roja centrado-navbar">
+    <a class="navbar-brand" href="#"><img id="imagen-inicio" src="../../../assets/img/navbar/icon.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a href="#" class="ov-btn-grow-box">Inicio</a>
+        <a href="#" class="ov-btn-grow-box">Acerca de</a>
+        <a routerLink="../catalogo" class="ov-btn-grow-box">Catálogo</a>
+        <a routerLink="../contacto" class="ov-btn-grow-box">Contacto</a>
+      </div>
+      <div id="botones">
+        <button type="button" class="ov-btn-grow-box" (click)="login()">Login</button>
         <button type="button" class="ov-btn-grow-box" (click)="register()">Register</button>
       </div>
-      </div>
     </div>
-  </nav>
+  </div>
+</nav>

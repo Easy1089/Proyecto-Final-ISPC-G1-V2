@@ -8,18 +8,21 @@ import { Router } from '@angular/router';
 
 export class NavbarComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  login(){
+  login() {
     this.router.navigate(['/login'])
   }
-  register(){
+  register() {
     this.router.navigate(['/register'])
   }
-  catalogo(){
+  catalogo() {
     this.router.navigate(['/catalogo'])
+  }
+  contacto() {
+    this.router.navigate(['/contacto'])
   }
 }
