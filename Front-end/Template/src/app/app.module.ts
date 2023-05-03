@@ -14,6 +14,7 @@ import { CarritoComponent } from './components/carrito/carrito.component';
 import { DescProductoComponent } from './components/desc-producto/desc-producto.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     CarritoComponent,
     DescProductoComponent,
     ContactoComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
