@@ -1,32 +1,10 @@
 <p>catalogo works!</p>
 <link rel="stylesheet" href="catalogo.component.css">
 
-
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6 col-lg-3 mb-2-6">
-            <app-producto></app-producto>
-        </div>
-        <div class="col-sm-6 col-lg-3 mb-2-6">
-            <app-producto></app-producto>
-        </div>
-        <div class="col-sm-6 col-lg-3 mb-2-6">
-            <app-producto></app-producto>
-        </div>
-        <div class="col-sm-6 col-lg-3 mb-2-6">
-            <app-producto></app-producto>
-        </div>
-        <div class="col-sm-6 col-lg-3 mb-2-6 mb-lg-0">
-            <app-producto></app-producto>
-        </div>
-        <div class="col-sm-6 col-lg-3 mb-2-6 mb-lg-0">
-            <app-producto></app-producto>
-        </div>
-        <div class="col-sm-6 col-lg-3 mb-2-6 mb-sm-0">
-            <app-producto></app-producto>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-            <app-producto></app-producto>
+<div class="catalog">
+    <div class="product-container">
+        <div class="product" *ngFor="let product of products">
+            <app-producto [product]="product"></app-producto>
         </div>
     </div>
 </div>

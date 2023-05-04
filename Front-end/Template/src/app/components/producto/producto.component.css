@@ -74,8 +74,9 @@ body {
 
 .text-secondary {
     color: #590829 !important;
-    font-family: 'Roboto', sans-serif;
+    font-family: Marcellus;
     font-size: 17px;
+    font-weight: 400;
 }
 
 .card-wrapper {
