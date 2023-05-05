@@ -36,19 +36,6 @@
         </div>
         <!-- /row-->
     </section>
-
-    <section class="about-me">
-        <div class="container">
-            <h3><span>Nuestro equipo</span></h3>
-
-            <div class="miembros">
-                <div class="miembro-container">
-                    <div class="product" *ngFor="let miembro of miembros">
-                        <app-miembroequipo [miembro]="miembro"></app-miembroequipo>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <app-miembroequipo></app-miembroequipo>
 </div>
 <app-footer></app-footer>
