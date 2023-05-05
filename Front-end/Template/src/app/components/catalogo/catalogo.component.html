@@ -1,0 +1,11 @@
+<p>catalogo works!</p>
+<link rel="stylesheet" href="catalogo.component.css">
+
+<div class="catalog">
+    <div class="product-container">
+        <div class="product" *ngFor="let product of products">
+            <app-producto [product]="product"></app-producto>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
