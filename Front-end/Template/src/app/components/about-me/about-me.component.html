@@ -1,4 +1,3 @@
-<p>about-me works!</p>
 <link rel="stylesheet" href="about-me.component.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -36,6 +35,20 @@
             <!-- /col-lg-5 -->
         </div>
         <!-- /row-->
+    </section>
+
+    <section class="about-me">
+        <div class="container">
+            <h3><span>Nuestro equipo</span></h3>
+
+            <div class="miembros">
+                <div class="miembro-container">
+                    <div class="product" *ngFor="let miembro of miembros">
+                        <app-miembroequipo [miembro]="miembro"></app-miembroequipo>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 <app-footer></app-footer>
