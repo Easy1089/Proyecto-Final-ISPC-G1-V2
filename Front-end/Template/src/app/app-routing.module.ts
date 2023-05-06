@@ -13,6 +13,7 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { MiembroequipoComponent } from './components/miembroequipo/miembroequipo.component';
+import { ResetPassComponent } from './reset-pass/reset-pass.component';
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path:'about-me',component: AboutMeComponent},
   {path:'header',component: HeaderComponent},
   {path:'producto',component: ProductoComponent},
-  {path:'miembroequipo',component: MiembroequipoComponent}
+  {path:'miembroequipo',component: MiembroequipoComponent},
+  {path:'reset-pass',component: ResetPassComponent}
 ];
 
 @NgModule({
