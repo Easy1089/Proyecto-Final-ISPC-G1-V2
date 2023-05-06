@@ -12,6 +12,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductoComponent } from './components/producto/producto.component';
+import { MiembroequipoComponent } from './components/miembroequipo/miembroequipo.component';
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path:'contacto',component: ContactoComponent},
   {path:'about-me',component: AboutMeComponent},
   {path:'header',component: HeaderComponent},
-  {path:'producto',component: ProductoComponent}
+  {path:'producto',component: ProductoComponent},
+  {path:'miembroequipo',component: MiembroequipoComponent}
 ];
 
 @NgModule({
