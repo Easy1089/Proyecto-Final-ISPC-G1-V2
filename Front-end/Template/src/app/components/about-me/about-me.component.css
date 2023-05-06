@@ -16,3 +16,21 @@ p {
     line-height: 26px;
     color: #595959;
 }
+
+h6 {
+    font-family: Marcellus;
+    font-size: 20px;
+    color: #191919;
+}
+
+.miembro-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.miembros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
