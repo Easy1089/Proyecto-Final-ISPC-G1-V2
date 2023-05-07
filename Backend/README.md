@@ -5,4 +5,4 @@
 
 
 
-#####  Link reposiorio: https://github.com/Easy1089/Proyecto-Final-ISPC-G1-V2
+#####  Link repositorio: https://github.com/Easy1089/Proyecto-Final-ISPC-G1-V2
