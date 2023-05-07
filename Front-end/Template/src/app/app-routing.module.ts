@@ -15,20 +15,14 @@ import { MiembroequipoComponent } from './components/miembroequipo/miembroequipo
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
 
 const routes: Routes = [
-  { 
-    path: 'home', 
-    component: HomeComponent,
-    children: [
-      { path: 'catalogo', component: CatalogoComponent },
-      { path: 'producto', component: ProductoComponent },
-      { path: 'descripcionproducto', component: DescProductoComponent },
-      { path: 'about-me', component: AboutMeComponent },
-      { path: 'contacto', component: ContactoComponent },
-      { path: 'miembroequipo', component: MiembroequipoComponent },
-      { path: 'checkout', component: CarritoComponent },
-
-    ]
-  },
+  { path: 'home', component: HomeComponent },
+  { path: 'catalogo', component: CatalogoComponent },
+  { path: 'producto', component: ProductoComponent },
+  { path: 'descripcionproducto', component: DescProductoComponent },
+  { path: 'about-me', component: AboutMeComponent },
+  { path: 'contacto', component: ContactoComponent },
+  { path: 'miembroequipo', component: MiembroequipoComponent },
+  { path: 'checkout', component: CarritoComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'reset-pass', component: ResetPassComponent },
@@ -43,3 +37,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
