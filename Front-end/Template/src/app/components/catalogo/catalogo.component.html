@@ -1,6 +1,12 @@
 <link rel="stylesheet" href="catalogo.component.css">
 
+<app-navbar></app-navbar>
+
+
 <div class="catalog">
+    <div class="container" style="margin-top: 10px;">
+        <h3>Bienvenidos a nuestro catálogo</h3>
+    </div>
     <div class="product-container">
         <div class="product" *ngFor="let product of products">
             <app-producto [product]="product"></app-producto>
