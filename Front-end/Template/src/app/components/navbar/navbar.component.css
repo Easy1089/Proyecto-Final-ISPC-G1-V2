@@ -1,74 +1,58 @@
-/* Barra de navegación */
-#barra-navegacion{
-    display: flex;
-    position: fixed;
-    width: 100%;
-    z-index: 2;
+nav {
+  background-color: #590829;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 20px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+a:hover {
+  color: #f00;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.fa {
+  margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-right {
+    margin-top: 10px;
     justify-content: center;
-}
-
-header nav{
-  margin-top: -20px;
-}
-
-.centrado-navbar{
-    display: flex;
-    justify-content: center;
-    
-}
-
-#imagen-inicio{
-  padding-top: 5px;
-  padding-bottom: -5px;
-  height: 70px;
-  width: 70px;
-}
-
-/* Botones Register / Login */
-.navbar button{
-
-  left: 375px;
-  background-color: #993b58;
-  top: 5px;
-}
-
-.seccion-roja{
-    background-color: #590829;
-    color: white;
-}
-
-  /* Boton Personalizado */
-
-  .ov-btn-grow-box {
-    background: #590829; /* color de fondo */
-    color: white; /* color de fuente */
-    border: 2px solid white#993b58; /* tamaño y color de borde */
-    padding: 16px 20px;
-    border-radius: 3px; /* redondear bordes */
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    display: inline-block;
-    text-decoration: none;
   }
-  .ov-btn-grow-box:hover {
-    color: #fff;/* color de fuente hover */
+
+  .fa {
+    margin-left: 8;
+    margin-right: 5px;
   }
-  .ov-btn-grow-box::after {
-    content: "";
-    background: #993b58; /* color de fondo hover */
-    position: absolute;
-    z-index: -1;
-    padding: 16px 20px;
-    display: block;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    transform: scale(0, 0);
-    transition: all 0.3s ease;
-  }
-  .ov-btn-grow-box:hover::after {
-    transition: all 0.3s ease-out;
-    transform: scale(1, 1);
-  }
+}
