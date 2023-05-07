@@ -1,70 +1,33 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="footer.component.css">
-
-<div class="search-text"> 
-    <div class="container">
-      <div class="row text-center">
-      
-        <div class="form">
-            <h4 id="texto-suscripcion">Suscribace para recibir las ultimas novedades</h4>
-             <form id="search-form" class="form-search form-horizontal">
-                 <input type="text" class="input-search" placeholder="Ingrese su e-mail">
-                 <button type="submit" class="btn-search">Enviar</button>
-             </form>
-         </div>
-     
-       </div>         
-    </div>     
+<div>
+   <router-outlet></router-outlet> <!-- Este router-outlet es importante para cargar los componentes de las rutas secundarias -->
  </div>
- 
- <footer>
-  <div class="container">
-    <div class="row">
-             <div class="col-md-4 col-sm-6 col-xs-12">
-               <span class="logo"><img id="icono" src="../../../assets/img/footer/icon.png" alt=""></span>
-             </div>
-             
-             <div class="col-md-4 col-sm-6 col-xs-12">
-                 <ul class="menu">
-                      <span>Enlaces</span>    
-                      <li>
-                         <a href="#">Inicio</a>
-                       </li>
-                            
-                       <li>
-                          <a href="#">Acerca de</a>
-                       </li>
-                       <li>
-                          <a href="#">Galeria</a>
-                       </li>
-                       <li>
-                         <p id="texto-copyright" >Copyright © 2023 - Le Mone</p>
-                      </li>
-                  </ul>
-             </div>
-        
-             <div class="col-md-4 col-sm-6 col-xs-12">
-               <ul class="address">
-                 <span>Contacto</span>       
-                 <li>
-                    <i id="icon" class="fa fa-phone" aria-hidden="true"></i> 
-                    <a href="#">351 123 4567</a>
-                 </li>
-                 <li>
-                    <i id="icon" class="fa fa-map-marker" aria-hidden="true"></i> 
-                    <a href="#">Ciudad de Córdoba</a>
-                 </li> 
-                 <li>
-                    <i id="icon" class="fa fa-envelope" aria-hidden="true"></i> 
-                    <a href="#">lemone.cba@gmail.com</a>
-                 </li> 
-                </ul>
-             </div>
-         </div> 
-     </div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<footer>
+   <div class="fila">
+      <a href=""><i id="redes" class="bi bi-facebook"></i></a>
+      <a href=""><i id="redes" class="bi bi-instagram"></i></a>
+   </div>
+   <div class="fila">
+      <div class="novedades">
+         <h4>Para recibir novedades</h4>
+         <form>
+           <input type="email" name="email" placeholder="Email">
+           <button type="submit"><i class="bi bi-send-fill"></i></button>
+         </form>
+       </div>
+   </div>
+   <div class="fila">
+      <a href="/home/about-me"><h5>Acerca de</h5></a>
+      <a href="/home/catalogo"><h5>Catálogo</h5></a>
+      <a href="/home/contacto"><h5>Contacto</h5></a>
+      <a href="/home"><h5>Inicio</h5></a>
+   </div>
+   <div class="fila">
+     <h6>© 2023 Lemone. Derechos Reservados</h6>
+   </div>
+   
  </footer>
+ 
