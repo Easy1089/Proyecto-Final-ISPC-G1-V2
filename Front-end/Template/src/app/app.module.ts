@@ -17,6 +17,7 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { MiembroequipoComponent } from './components/miembroequipo/miembroequipo.component';
+import { ResetPassComponent } from './reset-pass/reset-pass.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MiembroequipoComponent } from './components/miembroequipo/miembroequipo
     AboutMeComponent,
     HeaderComponent,
     ProductoComponent,
-    MiembroequipoComponent
+    MiembroequipoComponent,
+    ResetPassComponent
   ],
   imports: [
     BrowserModule,
