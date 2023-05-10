@@ -18,6 +18,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { MiembroequipoComponent } from './components/miembroequipo/miembroequipo.component';
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
+import { UsuarioProfileComponent } from './components/usuario-profile/usuario-profile.component';
+import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/preguntas-frecuentes.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { ResetPassComponent } from './reset-pass/reset-pass.component';
     HeaderComponent,
     ProductoComponent,
     MiembroequipoComponent,
-    ResetPassComponent
+    ResetPassComponent,
+    UsuarioProfileComponent,
+    PreguntasFrecuentesComponent
   ],
   imports: [
     BrowserModule,
