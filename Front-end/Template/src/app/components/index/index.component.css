@@ -498,3 +498,8 @@ footer {
   display: flex;
   justify-content: center;
 }
+
+.contenedor-pokemon a{
+  color: #590829;
+  text-decoration: none;
+}
