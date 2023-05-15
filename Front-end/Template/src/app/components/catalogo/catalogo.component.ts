@@ -61,6 +61,42 @@ export class CatalogoComponent implements OnInit {
       image: 'assets/img/catalogo/Vino9.jpg',
       precio: 777.99
     },
+    {
+      name: 'Ondulé',
+      description: 'Descripción producto  9',
+      image: 'assets/img/catalogo/Vino10.jpg',
+      precio: 777.99
+    },
+    {
+      name: 'Dancing Flame',
+      description: 'Ojos del Salado - 2018 - Chardonnay',
+      image: 'assets/img/catalogo/Vino11.jpg',
+      precio: 777.99
+    },
+    {
+      name: '19 Crimes',
+      description: 'Pinot Noir',
+      image: 'assets/img/catalogo/Vino12.jpg',
+      precio: 777.99
+    },
+    {
+      name: 'Grand Vin de Bordeaux',
+      description: 'Esprit de Puisseguin - 2016 - France',
+      image: 'assets/img/catalogo/Vino13.jpg',
+      precio: 777.99
+    },
+    {
+      name: 'Jacobs Creek',
+      description: 'Classic - Vintage 2018 - Australia',
+      image: 'assets/img/catalogo/Vino14.jpg',
+      precio: 777.99
+    },
+    {
+      name: 'Tabernero - Gran Rosé',
+      description: 'Semi seco - Afrutado - 2020 - ICA Perú',
+      image: 'assets/img/catalogo/Vino16.jpg',
+      precio: 777.99
+    }
   ];
 
   addToCart(product: any) {
