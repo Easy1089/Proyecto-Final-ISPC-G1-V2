@@ -12,13 +12,13 @@
    </div>
    <div class="fila">
       <div class="novedades">
-         <h4>Para recibir novedades</h4>
-         <form>
-           <input type="email" name="email" placeholder="Email">
-           <button type="submit"><i class="bi bi-send-fill"></i></button>
-         </form>
-       </div>
-   </div>
+        <h4>Para recibir novedades</h4>
+        <form (submit)="enviarSuscripcion($event)">
+          <input type="email" name="email" placeholder="Email" [(ngModel)]="correoElectronico">
+          <button type="submit"><i class="bi bi-send-fill"></i></button>
+        </form>
+      </div>
+    </div>
    <div class="fila">
       <button (click)="aboutme(); scrollToTop()"><h5>Acerca de</h5></button>
       <button (click)="catalogo(); scrollToTop()"><h5>Catálogo</h5></button>

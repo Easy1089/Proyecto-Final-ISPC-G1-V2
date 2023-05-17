@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -7,6 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+  correoElectronico: string = '';
+
+  enviarSuscripcion(event: Event) {
+    event.preventDefault(); // Evita que se envíe el formulario y se recargue la página
+
+    const mensaje = `Gracias por suscribirte a nuestro newsletter. Estarás recibiendo novedades a tu correo: ${this.correoElectronico}`;
+    window.alert(mensaje);
+    
+    this.correoElectronico = ''; // Limpia el campo de correo electrónico después de enviar
+  }
   
   scrollToTop() {
     window.scrollTo(0, 0);
