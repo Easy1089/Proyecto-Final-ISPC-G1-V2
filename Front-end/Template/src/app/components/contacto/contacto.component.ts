@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
@@ -17,7 +18,8 @@ export class ContactoComponent implements OnInit {
   }
 
   enviarMensaje() {
-    // Aquí puedes agregar la lógica para enviar el mensaje al servidor
+    const mensaje = `Gracias ${this.nombre} por enviarnos un mensaje. Responderemos en breve.`;
+    window.alert(mensaje);
     console.log('Mensaje enviado');
     console.log('Nombre:', this.nombre);
     console.log('Correo electrónico:', this.correoElectronico);
