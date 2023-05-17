@@ -21,7 +21,7 @@ import { MiembroequipoComponent } from './components/miembroequipo/miembroequipo
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { UsuarioProfileComponent } from './components/usuario-profile/usuario-profile.component';
 import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/preguntas-frecuentes.component';
-import { PokemonComponent } from './components/pokemon/pokemon.component';
+
 
 @NgModule({
   declarations: [
@@ -42,8 +42,8 @@ import { PokemonComponent } from './components/pokemon/pokemon.component';
     MiembroequipoComponent,
     ResetPassComponent,
     UsuarioProfileComponent,
-    PreguntasFrecuentesComponent,
-    PokemonComponent
+    PreguntasFrecuentesComponent
+    
   ],
   imports: [
     BrowserModule,

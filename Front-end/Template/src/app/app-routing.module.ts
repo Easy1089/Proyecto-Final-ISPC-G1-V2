@@ -15,7 +15,7 @@ import { MiembroequipoComponent } from './components/miembroequipo/miembroequipo
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { UsuarioProfileComponent } from './components/usuario-profile/usuario-profile.component';
 import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/preguntas-frecuentes.component';
-import { PokemonComponent } from './components/pokemon/pokemon.component';
+
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'catalogo', component: CatalogoComponent },
@@ -29,7 +29,6 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'reset-pass', component: ResetPassComponent },
   { path: 'usuarioprofile', component: UsuarioProfileComponent },
-  { path: 'pokemon', component: PokemonComponent },
   { path: 'preguntasfrecuentes', component: PreguntasFrecuentesComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: HomeComponent } // esta ruta captura cualquier otra ruta no definida
