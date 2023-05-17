@@ -7,6 +7,10 @@ import { Router } from '@angular/router';
 })
 export class IndexComponent implements OnInit {
 
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -14,5 +18,9 @@ export class IndexComponent implements OnInit {
 
   contactos() {
     this.router.navigate(['/contacto'])
+  }
+
+  catalogo(){
+    this.router.navigate(["/catalogo"])
   }
 }
