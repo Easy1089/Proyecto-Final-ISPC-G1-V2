@@ -28,6 +28,12 @@ footer {
     border-radius: 4px;
     margin-right: 10px;
   }
+
+  button{
+    color: white;
+    border: 0;
+    background-color: #590829;
+  }
   
   button[type="submit"] {
     font-size: 20px;
