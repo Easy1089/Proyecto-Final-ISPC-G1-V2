@@ -26,15 +26,15 @@
   </div>
   <nav>
     <ul>
-      <li><a href="/home">Inicio</a></li>
-      <li><a href="/about-me">Acerca de</a></li>
-      <li><a href="/catalogo">Catálogo</a></li>
-      <li><a href="/contacto">Contacto</a></li>
+      <li><button (click)="inicio();" >Inicio</button></li>
+      <li><button (click)="aboutme()" >Acerca de</button></li>
+      <li><button (click)="catalogo()" >Catálogo</button></li>
+      <li><button (click)="contacto()" >Contacto</button></li>
     </ul>
     <div class="nav-right">
-      <a href="/login"><i class="fa fa-user"></i> Login</a>
-      <a href="/register"><i class="fa fa-user-plus"></i> Register</a>
-      <a href="/checkout"><i class="fa fa-shopping-cart"></i></a>
+      <button (click)="login()"><i class="fa fa-user"></i> Login</button>
+      <button (click)="register()"><i class="fa fa-user-plus"></i> Register</button>
+      <button (click)="carrito()"><i class="fa fa-shopping-cart"></i></button>
     </div>
   </nav>
   

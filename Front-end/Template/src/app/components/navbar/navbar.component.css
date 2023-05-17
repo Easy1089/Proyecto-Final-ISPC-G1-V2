@@ -20,13 +20,15 @@ li {
   margin: 0 10px;
 }
 
-a {
+button {
   text-decoration: none;
   font-weight: bold;
   color: #fff;
+  border: none;
+  background-color: #590829;
 }
 
-a:hover {
+button:hover {
   color: #f00;
 }
 
