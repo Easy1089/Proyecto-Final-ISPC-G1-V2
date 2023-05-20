@@ -19,7 +19,7 @@
         <div class="small m-t-xs">
             {{ product.description }}
         </div>
-        <h5 class="mb-0 text-primary">$ {{ product.precio }}</h5>
+        <h5 class="mb-0 text-primary"> {{ product.precio|currency }}</h5>
         <div class="agregarcarrito">
             <div class="btn-group" style="margin-top: 15px; align-items: center;">                     
                 <button class="add-to-cart">
