@@ -12,18 +12,18 @@
    </div>
    <div class="fila">
       <div class="novedades">
-         <h4>Para recibir novedades</h4>
-         <form>
-           <input type="email" name="email" placeholder="Email">
-           <button type="submit"><i class="bi bi-send-fill"></i></button>
-         </form>
-       </div>
-   </div>
+        <h4>Para recibir novedades</h4>
+        <form (submit)="enviarSuscripcion($event)">
+          <input type="email" name="email" placeholder="Email" [(ngModel)]="correoElectronico">
+          <button type="submit"><i class="bi bi-send-fill"></i></button>
+        </form>
+      </div>
+    </div>
    <div class="fila">
-      <a href="/about-me"><h5>Acerca de</h5></a>
-      <a href="/catalogo"><h5>Catálogo</h5></a>
-      <a href="/contacto"><h5>Contacto</h5></a>
-      <a href="/home"><h5>Inicio</h5></a>
+      <button (click)="aboutme(); scrollToTop()"><h5>Acerca de</h5></button>
+      <button (click)="catalogo(); scrollToTop()"><h5>Catálogo</h5></button>
+      <button (click)="contacto(); scrollToTop()"><h5>Contacto</h5></button>
+      <button (click)="inicio(); scrollToTop()"><h5>Inicio</h5></button>
    </div>
    <div class="fila">
      <h6>© 2023 Lemone. Derechos Reservados</h6>

@@ -3,6 +3,17 @@ body {
 
 }
 
+h4 {
+    color: #590829 !important;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+h5 {
+    margin-top: 10px;
+}
+
 .team-style1 .team-social-icon {
     position: absolute;
     top: 0;
@@ -189,4 +200,75 @@ body {
 .boton3:hover {
     background: #590829;
     color: #fff !important;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    color: #4a4a4a;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: color 0.2s;
+}
+
+button:hover {
+    color: #590829;
+}
+
+button i {
+    margin-right: 5px;
+}
+
+button.add-to-cart {
+    color: #ffffff;
+    background-color: #590829;
+    padding: 6px 12px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button.add-to-cart:hover {
+    background-color: #590829;
+}
+
+button.remove-from-cart {
+    color: #590829;
+    border: 1px solid #590829;
+    padding: 6px 12px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button.remove-from-cart:hover {
+    color: #ffffff;
+    background-color: #590829;
+    border-color: #590829;
+}
+
+button.add-to-favorites {
+    color: #590829;
+    background-color: transparent;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+button.add-to-favorites:hover {
+    color: #ffbb3f;
+}
+
+button.search {
+    background-color: #f2f2f2;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button.search:hover {
+    background-color: #e6e6e6;
+}
+
+button.search i {
+    font-size: 1.2rem;
 }

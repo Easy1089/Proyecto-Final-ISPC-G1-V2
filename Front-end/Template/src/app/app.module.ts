@@ -15,13 +15,12 @@ import { CarritoComponent } from './components/carrito/carrito.component';
 import { DescProductoComponent } from './components/desc-producto/desc-producto.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
-import { HeaderComponent } from './components/header/header.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { MiembroequipoComponent } from './components/miembroequipo/miembroequipo.component';
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { UsuarioProfileComponent } from './components/usuario-profile/usuario-profile.component';
 import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/preguntas-frecuentes.component';
-import { PokemonComponent } from './components/pokemon/pokemon.component';
+
 
 @NgModule({
   declarations: [
@@ -37,13 +36,12 @@ import { PokemonComponent } from './components/pokemon/pokemon.component';
     DescProductoComponent,
     ContactoComponent,
     AboutMeComponent,
-    HeaderComponent,
     ProductoComponent,
     MiembroequipoComponent,
     ResetPassComponent,
     UsuarioProfileComponent,
-    PreguntasFrecuentesComponent,
-    PokemonComponent
+    PreguntasFrecuentesComponent
+    
   ],
   imports: [
     BrowserModule,

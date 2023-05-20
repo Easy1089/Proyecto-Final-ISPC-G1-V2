@@ -6,31 +6,32 @@
 <link
     href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Marcellus&family=Rouge+Script&display=swap"
     rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-**" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <div class="product">
-    <div class="card-wrapper mb-4">
+    <div>
         <div class="card-img">
             <img [src]="product.image" alt="..." height="240px">
         </div>
-        <div class="card-body">
-            <div>
-                <a href="#"><i class="bg-white p-3 rounded-circle ti-shopping-cart font-weight-600"></i></a>
-            </div>
-        </div>
     </div>
     <div class="text-center">
-        <h4 class="h5 mb-2"><a href="#" class="text-secondary">{{ product.name }}</a></h4>
-        <div class="product-rating mb-2">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star mr-0"></i>
+        <h4 class="h5 mb-2">{{ product.name }}</h4>
+        <div class="small m-t-xs">
+            {{ product.description }}
         </div>
-        <h5 class="mb-0 text-primary">$ {{ product.precio }}</h5>
+        <h5 class="mb-0 text-primary"> {{ product.precio|currency }}</h5>
         <div class="agregarcarrito">
-            <span class="boton3">Agregar al carrito</span>
+            <div class="btn-group" style="margin-top: 15px; align-items: center;">                     
+                <button class="add-to-cart">
+                    <i class="fas fa-shopping-cart" style="margin-left: 6px;"></i>
+                </button>                     
+                <button class="add-to-cart">
+                    <i class="fas fa-trash-alt" style="margin-left: 6px;"></i>
+                </button>                     
+                <button class="add-to-cart">
+                    <i class="fas fa-heart" style="margin-left: 6px;"></i>
+                </button>                 
+            </div>
         </div>
     </div>
 </div>
