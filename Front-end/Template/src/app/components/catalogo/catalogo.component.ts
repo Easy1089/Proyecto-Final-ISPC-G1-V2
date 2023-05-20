@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductoService } from 'src/app/service/producto.service';
 
 @Component({
   selector: 'app-catalogo',
@@ -6,13 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./catalogo.component.css']
 })
 export class CatalogoComponent implements OnInit {
-
-  constructor() { }
+  products:any;
+  constructor(private producto: ProductoService) { 
+    this.producto.ObtenerProductos().subscribe({
+      next: (productosData) => {
+        this.products=productosData
+      },
+      error: (errorData) => {
+        console.error(errorData);
+      }
+    })
+  }
 
   ngOnInit(): void {
   }
-  
-  products = [
+}
+
+
+/*
+products = [
     { 
       name: 'Cabernet Sauvignon',
       description: 'Descripción producto  1',
@@ -106,5 +119,4 @@ export class CatalogoComponent implements OnInit {
   selectedProduct: any;
   selectProduct(product: any) {
     this.selectedProduct = product;
-  }
-}
+  } */
