@@ -9,10 +9,17 @@
 - Enzo Mateo Antunez: Analista, diseñador y programador. Usuario De Github: MateoAntunez7
 - Marcelo Apaz: Analista, diseñador y programador. Usuario Github: marceapaz
 - Melisa Apaz: Analista, diseñador y programador. Usuario Github: melisaapaz 
+- Salvador Beron:Analista, diseñador y programador usuario Github: SalvadorBeron
+
+
+** No participan mas del trabajo grupal **
+
 - Ana Eugenia Abregú: Analista, diseñador y programador.Usuario Github: AEugenia89
 - Jesica Amaya: Analista, diseñador y programador Usuario Github: jesicaeamaya
 - Dalma Ponce: Analista, diseñador y programador. Usuario Github: dalmaponce
-- Salvador Beron:Analista, diseñador y programador usuario Github: SalvadorBeron
+
+
+
 
 ***Link a repositorio de trabajo remoto del año pasado 2022*** 
 
