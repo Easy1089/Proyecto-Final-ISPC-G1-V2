@@ -13,6 +13,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { MiembroequipoComponent } from './components/miembroequipo/miembroequipo.component';
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
+import { UsuarioProfileComponent } from './components/usuario-profile/usuario-profile.component';
+import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/preguntas-frecuentes.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -26,6 +28,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'reset-pass', component: ResetPassComponent },
+  { path: 'usuarioprofile', component: UsuarioProfileComponent },
+  { path: 'preguntasfrecuentes', component: PreguntasFrecuentesComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: HomeComponent } // esta ruta captura cualquier otra ruta no definida
 ];

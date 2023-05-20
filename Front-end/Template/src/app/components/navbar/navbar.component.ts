@@ -12,6 +12,10 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  inicio(){
+    this.router.navigate([""])
+  }
 
   login() {
     this.router.navigate(['/login'])
@@ -28,5 +32,8 @@ export class NavbarComponent implements OnInit {
 
   aboutme() {
     this.router.navigate(['/about-me'])
+  }
+  carrito() {
+    this.router.navigate(['/checkout'])
   }
 }

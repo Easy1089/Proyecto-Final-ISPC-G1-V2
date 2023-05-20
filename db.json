@@ -1,0 +1,104 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "name": "Tabernero - Gran Rosé",
+      "description": "Semi seco - Afrutado - 2020 - ICA Perú",
+      "image": "assets/img/catalogo/Vino16.jpg",
+      "precio": "777.99"
+    },
+    { 
+      "id": 2,
+      "name": "Cabernet Sauvignon",
+      "description": "Descripción producto  1",
+      "image": "assets/img/catalogo/Vino1.jpg",
+      "precio": 125.50
+    },
+    {
+      "id": 3,
+      "name": "Amelia Pinot Noir",
+      "description": "Descripción producto  2",
+      "image": "assets/img/catalogo/Vino2.jpg",
+      "precio": 80.50
+    },
+    {
+      "id": 4,
+      "name": "Merlot",
+      "description": "Descripción producto 3",
+      "image": "assets/img/catalogo/Vino3.jpg",
+      "precio": 189.50
+    },
+    {
+      "id": 5,
+      "name": "Syrah",
+      "description": "Descripción producto  4",
+      "image": "assets/img/catalogo/Vino4.jpg",
+      "precio": 1859.50
+    },
+    {
+      "id": 6,
+      "name": "Carmenere",
+      "description": "Descripción producto  5",
+      "image": "./assets/img/catalogo/Vino5.jpg",
+      "precio": 1500
+    },
+    {
+      "id": 7,
+      "name": "Malbec",
+      "description": "Descripción producto  6",
+      "image": "assets/img/catalogo/Vino6.jpg",
+      "precio": 8925.50
+    },
+    {
+      "id": 8,
+      "name": "Cabernet Sauvignon",
+      "description": "Descripción producto  7",
+      "image": "assets/img/catalogo/Vino7.jpg",
+      "precio": 8265.50
+    },
+    {
+      "id": 9,
+      "name": "Rosado",
+      "description": "Descripción producto  8",
+      "image": "assets/img/catalogo/Vino9.jpg",
+      "precio": 777.99
+    },
+    {
+      "id": 10,
+      "name": "Ondulé",
+      "description": "Descripción producto  9",
+      "image": "assets/img/catalogo/Vino10.jpg",
+      "precio": 777.99
+    },
+    {
+      "id": 11,
+      "name": "Dancing Flame",
+      "description": "Ojos del Salado - 2018 - Chardonnay",
+      "image": "assets/img/catalogo/Vino11.jpg",
+      "precio": 777.99
+    },
+    {
+      "id": 12,
+      "name": "19 Crimes",
+      "description": "Pinot Noir",
+      "image": "assets/img/catalogo/Vino12.jpg",
+      "precio": 777.99
+    },
+    {
+      "id": 13,
+      "name": "Grand Vin de Bordeaux",
+      "description": "Esprit de Puisseguin - 2016 - France",
+      "image": "assets/img/catalogo/Vino13.jpg",
+      "precio": 777.99
+    },
+    {
+      "id": 14,
+      "name": "Jacobs Creek",
+      "description": "Classic - Vintage 2018 - Australia",
+      "image": "assets/img/catalogo/Vino14.jpg",
+      "precio": 777.99
+    }
+  ]
+}
+
+

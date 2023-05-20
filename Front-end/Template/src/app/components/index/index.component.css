@@ -69,10 +69,6 @@
     margin-top: 150px;
   }
 
-  .contenedor img {
-    margin-top: 170px;
-  }
-
   .contenedor h2 {
     font-size: 1.5em;
   }
@@ -489,4 +485,17 @@ footer {
 
 .testimonio-footer .cliente {
   font-size: 1.2rem;
+}
+
+/* Boton pokemon */
+
+.contenedor-pokemon{
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-pokemon a{
+  color: #590829;
+  text-decoration: none;
 }
