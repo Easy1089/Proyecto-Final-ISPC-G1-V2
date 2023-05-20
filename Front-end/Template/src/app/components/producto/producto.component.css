@@ -7,6 +7,11 @@ h4 {
     color: #590829 !important;
     font-size: 17px;
     font-weight: 500;
+    margin-top: 10px;
+}
+
+h5 {
+    margin-top: 10px;
 }
 
 .team-style1 .team-social-icon {
