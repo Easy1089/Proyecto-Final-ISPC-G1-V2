@@ -16,4 +16,9 @@ export class ProductoService {
   {
     return this.http.get(this.url+"productos");
   }
+
+  ObtenerProductoPorId(id:number): Observable <any>
+  {
+    return this.http.get(this.url+"productos"+"/"+id);
+  }
 }

@@ -30,6 +30,7 @@ const routes: Routes = [
   { path: 'reset-pass', component: ResetPassComponent },
   { path: 'usuarioprofile', component: UsuarioProfileComponent },
   { path: 'preguntasfrecuentes', component: PreguntasFrecuentesComponent },
+  {path: 'descripcionproducto/:id', component: DescProductoComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: HomeComponent } // esta ruta captura cualquier otra ruta no definida
 ];
