@@ -23,21 +23,35 @@
                 <div class="form-outline mb-4">
                   <input type="text" id="form3Example1cg" class="form-control form-control-lg" formControlName="fullName" />
                   <label class="form-label" for="form3Example1cg">Nombre y apellido</label>
+                  <div *ngIf="registrationForm.get('fullName')?.invalid && (registrationForm.get('fullName')?.dirty || registrationForm.get('fullName')?.touched)" class="text-danger">
+                    <div *ngIf="registrationForm.get('fullName')?.errors?.['required']">El nombre y apellido son obligatorios.</div>
+                  </div>
                 </div>
               
                 <div class="form-outline mb-4">
                   <input type="email" id="form3Example3cg" class="form-control form-control-lg" formControlName="email" />
                   <label class="form-label" for="form3Example3cg">Email</label>
+                  <div *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)" class="text-danger">
+                    <div *ngIf="registrationForm.get('email')?.errors?.['required']">El email es obligatorio.</div>
+                    <div *ngIf="registrationForm.get('email')?.errors?.['email']">El email debe ser un correo electrónico válido.</div>
+                  </div>
                 </div>
               
                 <div class="form-outline mb-4">
                   <input type="password" id="form3Example4cg" class="form-control form-control-lg" formControlName="password" />
                   <label class="form-label" for="form3Example4cg">Contraseña</label>
+                  <div *ngIf="registrationForm.get('password')?.invalid && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched)" class="text-danger">
+                    <div *ngIf="registrationForm.get('password')?.errors?.['required']">La contraseña es obligatoria.</div>
+                    <div *ngIf="registrationForm.get('password')?.errors?.['minlength']">La contraseña debe tener al menos 6 caracteres.</div>
+                  </div>
                 </div>
               
                 <div class="form-outline mb-4">
                   <input type="password" id="form3Example4cdg" class="form-control form-control-lg" formControlName="confirmPassword" />
                   <label class="form-label" for="form3Example4cdg">Repite la contraseña</label>
+                  <div *ngIf="registrationForm.get('confirmPassword')?.invalid && (registrationForm.get('confirmPassword')?.dirty || registrationForm.get('confirmPassword')?.touched)" class="text-danger">
+                    <div *ngIf="registrationForm.get('confirmPassword')?.errors?.['required']">Debes repetir la contraseña.</div>
+                  </div>
                 </div>
               
                 <div class="form-check d-flex justify-content-center mb-5">

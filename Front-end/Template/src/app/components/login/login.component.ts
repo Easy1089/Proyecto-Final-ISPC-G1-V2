@@ -10,16 +10,14 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, 
-    private router:Router) { }
+  constructor(private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
+      username: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
   }
-  
 
   onSubmit() {
     if (this.loginForm.valid) {
@@ -31,10 +29,22 @@ export class LoginComponent implements OnInit {
 
       // Aquí puedes llamar a un servicio para enviar los datos del formulario
       // this.authService.login(username, password);
+    } else {
+      // Marcar todos los campos del formulario como tocados para mostrar los mensajes de error
+      this.markAllFieldsAsTouched();
     }
   }
 
-  register(){
-    this.router.navigate(['/register'])
+  register() {
+    this.router.navigate(['/register']);
+  }
+
+  markAllFieldsAsTouched() {
+    Object.keys(this.loginForm.controls).forEach(field => {
+      const control = this.loginForm.get(field);
+      if (control) {
+        control.markAsTouched({ onlySelf: true });
+      }
+    });
   }
 }
