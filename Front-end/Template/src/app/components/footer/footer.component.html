@@ -1,33 +1,51 @@
 <div>
-   <router-outlet></router-outlet> <!-- Este router-outlet es importante para cargar los componentes de las rutas secundarias -->
- </div>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <router-outlet></router-outlet>
+  <!-- Este router-outlet es importante para cargar los componentes de las rutas secundarias -->
+</div>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Arizonia&family=Dancing+Script:wght@700&display=swap"
+  rel="stylesheet"
+/>
 
 <footer>
-   <div class="fila">
-      <a href=""><i id="redes" class="bi bi-facebook"></i></a>
-      <a href=""><i id="redes" class="bi bi-instagram"></i></a>
-   </div>
-   <div class="fila">
-      <div class="novedades">
-        <h4>Para recibir novedades</h4>
-        <form (submit)="enviarSuscripcion($event)">
-          <input type="email" name="email" placeholder="Email" [(ngModel)]="correoElectronico">
-          <button type="submit"><i class="bi bi-send-fill"></i></button>
-        </form>
-      </div>
+  <div class="fila">
+    <a href=""><i id="redes" class="bi bi-facebook"></i></a>
+    <a href=""><i id="redes" class="bi bi-instagram"></i></a>
+  </div>
+  <div class="fila">
+    <div class="novedades">
+      <h4>Para recibir novedades</h4>
+      <form [formGroup]="suscripcionForm" (submit)="enviarSuscripcion($event)">
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          formControlName="correoElectronico"
+        />
+        <div
+          *ngIf="
+            suscripcionForm.get('correoElectronico')?.invalid &&
+            (suscripcionForm.get('correoElectronico')?.dirty ||
+              suscripcionForm.get('correoElectronico')?.touched)
+          "
+          class="text-danger"
+        >
+          El correo electrónico es inválido.
+        </div>
+
+        <button type="submit"><i class="bi bi-send-fill"></i></button>
+      </form>
     </div>
-   <div class="fila">
-      <button (click)="aboutme(); scrollToTop()"><h5>Acerca de</h5></button>
-      <button (click)="catalogo(); scrollToTop()"><h5>Catálogo</h5></button>
-      <button (click)="contacto(); scrollToTop()"><h5>Contacto</h5></button>
-      <button (click)="inicio(); scrollToTop()"><h5>Inicio</h5></button>
-   </div>
-   <div class="fila">
-     <h6>© 2023 Lemone. Derechos Reservados</h6>
-   </div>
-   
- </footer>
- 
+  </div>
+  <div class="fila">
+    <button (click)="aboutme(); scrollToTop()"><h5>Acerca de</h5></button>
+    <button (click)="catalogo(); scrollToTop()"><h5>Catálogo</h5></button>
+    <button (click)="contacto(); scrollToTop()"><h5>Contacto</h5></button>
+    <button (click)="inicio(); scrollToTop()"><h5>Inicio</h5></button>
+  </div>
+  <div class="fila">
+    <h6>© 2023 Lemone. Derechos Reservados</h6>
+  </div>
+</footer>
