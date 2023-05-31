@@ -33,7 +33,7 @@
       <div class="contact-image">
         <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
       </div>
-      <form (submit)="enviarMensaje()">
+      <form [formGroup]="miFormulario" (submit)="enviarMensaje()">
         <h3>Dejanos un mensaje</h3>
         <div class="row">
           <div class="col-md-6">
@@ -43,8 +43,11 @@
                 name="txtName"
                 class="form-control"
                 placeholder="Tu Nombre *"
-                [(ngModel)]="nombre"
+                formControlName="nombre"
               />
+              <div *ngIf="miFormulario?.get('nombre')?.errors?.['required'] && miFormulario?.get('nombre')?.touched" class="text-danger">
+                El nombre es obligatorio.
+              </div>
             </div>
             <div class="form-group">
               <input
@@ -52,8 +55,14 @@
                 name="txtEmail"
                 class="form-control"
                 placeholder="Tu Email *"
-                [(ngModel)]="correoElectronico"
+                formControlName="correoElectronico"
               />
+              <div *ngIf="miFormulario?.get('correoElectronico')?.errors?.['required'] && miFormulario?.get('correoElectronico')?.touched" class="text-danger">
+                El correo electrónico es obligatorio.
+              </div>
+              <div *ngIf="miFormulario?.get('correoElectronico')?.errors?.['email'] && miFormulario?.get('correoElectronico')?.touched" class="text-danger">
+                El correo electrónico no es válido.
+              </div>
             </div>
             <div class="form-group">
               <input
@@ -61,11 +70,14 @@
                 name="txtPhone"
                 class="form-control"
                 placeholder="Tu Numero de telefono*"
-                [(ngModel)]="numeroTelefono"
+                formControlName="numeroTelefono"
               />
+              <div *ngIf="miFormulario?.get('numeroTelefono')?.errors?.['required']  && miFormulario?.get('numeroTelefono')?.touched" class="text-danger">
+                El número de teléfono es obligatorio.
+              </div>
             </div>
             <div class="form-group">
-              <input type="submit" name="btnSubmit" class="btnContact" value="Enviar mensaje" />
+              <input type="submit" name="btnSubmit" class="btnContact" value="Enviar mensaje" [disabled]="miFormulario?.invalid" />
             </div>
           </div>
           <div class="col-md-6">
@@ -75,13 +87,18 @@
                 class="form-control"
                 placeholder="Mensaje*"
                 style="width: 100%; height: 150px"
-                [(ngModel)]="mensaje"
+                formControlName="mensaje"
               ></textarea>
+              <div *ngIf="miFormulario?.get('mensaje')?.errors?.['required']  && miFormulario?.get('mensaje')?.touched" class="text-danger">
+                El mensaje es obligatorio.
+              </div>
             </div>
           </div>
         </div>
       </form>
     </div>
+    
+    
     
     <app-footer></app-footer>
   </body>
