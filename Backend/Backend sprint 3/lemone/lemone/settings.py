@@ -37,14 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-     # Django custom apps
+    'django.contrib.staticfiles',    
+    # Django custom apps
     'authentication',
     'apilemone',
      # Django external apps
     'rest_framework',
     'django_rest_passwordreset',  
-    'corsheaders',
+    'corsheaders',  
 ]
 
 # Custom user model
@@ -53,17 +53,16 @@ AUTH_USER_MODEL = "authentication.CustomUser"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 # Configuración de CORS
-CORS_ORIGIN_WHITELIST = ["http://localhost:3000"]
-CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'lemone.urls'
 

@@ -6,21 +6,24 @@ import { ProductoService } from 'src/app/service/producto.service';
   templateUrl: './catalogo.component.html',
   styleUrls: ['./catalogo.component.css']
 })
+
 export class CatalogoComponent implements OnInit {
-  products:any;
-  constructor(private producto: ProductoService) { 
+  productos: any[] | undefined;
+
+  constructor(private producto: ProductoService) {}
+
+  ngOnInit(): void {
     this.producto.ObtenerProductos().subscribe({
-      next: (productosData) => {
-        this.products=productosData
+      next: (response) => {
+        console.log(response.productos);
+        this.productos = response.productos; // Extraer el array de productos de la respuesta
       },
       error: (errorData) => {
         console.error(errorData);
       }
-    })
+    });
   }
-
-  ngOnInit(): void {
-  }
+  
 }
 
 

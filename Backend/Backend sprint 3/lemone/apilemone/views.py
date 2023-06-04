@@ -8,13 +8,23 @@ from django.views import View
 from django.http import JsonResponse
 
 class ProductoView(APIView):
-    def get(self, request):
-        productos = Producto.objects.all()
-        serializer = ProductoSerializer(productos, many=True)
-        if len(serializer.data) > 0:
-            datos = {'message': 'Success', 'productos': serializer.data}
+    def get(self, request, producto_id=None):
+        if producto_id is None:
+            # Obtener todos los productos
+            productos = Producto.objects.all()
+            serializer = ProductoSerializer(productos, many=True)
+            if len(serializer.data) > 0:
+                datos = {'message': 'Success', 'productos': serializer.data}
+            else:
+                datos = {'message': 'Productos no encontrados...'}
         else:
-            datos = {'message': 'Productos no encontrados...'}
+            # Obtener un producto específico por ID
+            try:
+                producto = Producto.objects.get(id=producto_id)
+                serializer = ProductoSerializer(producto)
+                datos = {'message': 'Success', 'producto': serializer.data}
+            except Producto.DoesNotExist:
+                datos = {'message': 'Producto no encontrado...'}
         return Response(datos)
     
     def post(self, request):

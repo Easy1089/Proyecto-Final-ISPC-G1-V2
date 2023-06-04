@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductoService {
-  url:string="http://localhost:3000/"
+  url:string="http://127.0.0.1:8000"
 
   constructor(private http:HttpClient) { 
 
@@ -14,11 +14,13 @@ export class ProductoService {
 
   ObtenerProductos(): Observable <any>
   {
-    return this.http.get(this.url+"productos");
+    /*return this.http.get<any>('api/productos');*/
+    return this.http.get<any[]>('api/productos');
   }
 
   ObtenerProductoPorId(id:number): Observable <any>
   {
-    return this.http.get(this.url+"productos"+"/"+id);
+    /*return this.http.get(this.url+"productos"+"/"+id);*/
+    return this.http.get<any[]>('api/api/productos'+"/"+id);
   }
 }

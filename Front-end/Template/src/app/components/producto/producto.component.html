@@ -11,15 +11,15 @@
 <div class="product">
     <div>
         <div class="card-img">
-            <img [src]="product.image" alt="..." height="240px">
+            <img [src]="product.imagen" alt="..." height="240px">
         </div>
     </div>
     <div class="text-center">
-        <h4 class="h5 mb-2">{{ product.name }}</h4>
+        <h4 class="h5 mb-2">{{ product.nombre }}</h4>
         <div class="small m-t-xs">
-            {{ product.description }}
+            {{ product.descripcion }}
         </div>
-        <h5 class="mb-0 text-primary"> {{ product.precio|currency }}</h5>
+        <h5 class="mb-0 text-primary"> {{ product.preciodeventa|currency }}</h5>
         <div class="agregarcarrito">
             <div class="btn-group" style="margin-top: 15px; align-items: center;">                     
                 <button class="add-to-cart">
