@@ -21,7 +21,8 @@ export class DescProductoComponent implements OnInit {
 
     this.producto.ObtenerProductoPorId(this.id).subscribe({
       next: (productoData: any) => {
-        this.product=productoData
+        console.log(productoData.producto);
+        this.product=productoData.producto
       },
       error: (errorData: any) => {
         console.error(errorData);
