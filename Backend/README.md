@@ -1,9 +1,16 @@
-# Proyecto-Final-ISPC-G1-V2 - Backend
+**Repositorio del Proyecto-Final-ISPC-G1-V2**
 
-#### Diagrama de clases
+**LE MONE** E-commerce de productos para Vinotecas.
 
-#### Casos de uso
 
-#####Link repositorio: https://github.com/Easy1089/Proyecto-Final-ISPC-G1-V2
+Contiene Carpetas :
+
+#### Backend Sprint 2 
+
+#### Backend Sprint 3
+
+
+
+
 
 #####  Link repositorio: https://github.com/Easy1089/Proyecto-Final-ISPC-G1-V2
