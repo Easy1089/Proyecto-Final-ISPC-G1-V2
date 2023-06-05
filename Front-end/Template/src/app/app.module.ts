@@ -20,6 +20,7 @@ import { MiembroequipoComponent } from './components/miembroequipo/miembroequipo
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { UsuarioProfileComponent } from './components/usuario-profile/usuario-profile.component';
 import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/preguntas-frecuentes.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/
     MiembroequipoComponent,
     ResetPassComponent,
     UsuarioProfileComponent,
-    PreguntasFrecuentesComponent
+    PreguntasFrecuentesComponent,
+    DashboardComponent
     
   ],
   imports: [
