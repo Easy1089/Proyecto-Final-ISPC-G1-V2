@@ -18,6 +18,7 @@ import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { Pagina500Component } from './components/pagina500/pagina500.component';
+import { PurchaseComponent } from './components/purchase/purchase.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'error404', component: Pagina404Component },
   { path: 'usuarioprofile', component: UsuarioProfileComponent },
   { path: 'preguntasfrecuentes', component: PreguntasFrecuentesComponent },
+  { path: 'purchase', component: PurchaseComponent  },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'error500', component: Pagina500Component },
   {path: 'descripcionproducto/:id', component: DescProductoComponent},

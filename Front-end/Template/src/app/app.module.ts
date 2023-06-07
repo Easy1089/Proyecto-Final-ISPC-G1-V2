@@ -23,6 +23,7 @@ import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { Pagina500Component } from './components/pagina500/pagina500.component';
+import { PurchaseComponent } from './components/purchase/purchase.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { Pagina500Component } from './components/pagina500/pagina500.component';
     PreguntasFrecuentesComponent,
     DashboardComponent,
     Pagina404Component,
-    Pagina500Component
+    Pagina500Component,
+    PurchaseComponent
     
   ],
   imports: [
