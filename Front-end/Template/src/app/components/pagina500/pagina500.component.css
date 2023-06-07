@@ -113,15 +113,15 @@
 }
 
 .error-wrapper .error-container.error-500 {
-    background-color: #ffc107
+    background-color: #cb7169
 }
 
 .error-wrapper .error-container.error-500 .error .error-or .or-line {
-    background-color: #d39e00
+    background-color: #56070c
 }
 
 .error-wrapper .error-container.error-500 .error .error-or .or {
-    background-color: #ffc107
+    background-color: #56070c
 }
 
 .error-wrapper .error-container.error-401 {
