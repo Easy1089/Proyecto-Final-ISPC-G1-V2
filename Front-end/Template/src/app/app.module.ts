@@ -22,6 +22,7 @@ import { UsuarioProfileComponent } from './components/usuario-profile/usuario-pr
 import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/preguntas-frecuentes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
+import { Pagina500Component } from './components/pagina500/pagina500.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { Pagina404Component } from './components/pagina404/pagina404.component';
     UsuarioProfileComponent,
     PreguntasFrecuentesComponent,
     DashboardComponent,
-    Pagina404Component
+    Pagina404Component,
+    Pagina500Component
     
   ],
   imports: [
