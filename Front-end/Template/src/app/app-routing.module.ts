@@ -16,6 +16,7 @@ import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { UsuarioProfileComponent } from './components/usuario-profile/usuario-profile.component';
 import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/preguntas-frecuentes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { Pagina404Component } from './components/pagina404/pagina404.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'reset-pass', component: ResetPassComponent },
+  { path: 'error404', component: Pagina404Component },
   { path: 'usuarioprofile', component: UsuarioProfileComponent },
   { path: 'preguntasfrecuentes', component: PreguntasFrecuentesComponent },
   { path: 'dashboard', component: DashboardComponent },

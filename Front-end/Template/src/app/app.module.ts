@@ -21,6 +21,7 @@ import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { UsuarioProfileComponent } from './components/usuario-profile/usuario-profile.component';
 import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/preguntas-frecuentes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { Pagina404Component } from './components/pagina404/pagina404.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ResetPassComponent,
     UsuarioProfileComponent,
     PreguntasFrecuentesComponent,
-    DashboardComponent
+    DashboardComponent,
+    Pagina404Component
     
   ],
   imports: [
