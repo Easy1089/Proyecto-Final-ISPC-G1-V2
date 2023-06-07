@@ -12,7 +12,7 @@ export class Pagina404Component implements OnInit {
   ngOnInit(): void {
   }
 
-  login() {
+  home() {
     this.router.navigate(['/home'])
   }
 }
