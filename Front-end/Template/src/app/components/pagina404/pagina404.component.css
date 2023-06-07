@@ -18,7 +18,7 @@ p{
 }
 .btn-primary:hover {
     color: #fff;
-    background-color: #0069d9;
+    background-color: #cb7169;
     border-color: #0062cc;
 }
 .btn-primary {
@@ -32,6 +32,7 @@ p{
 }
 
 .btn {
+    color: #fff;
     font-size: 15px;
     font-weight: 600;
     padding: 9px 25px;
@@ -181,7 +182,7 @@ p{
     width: 7em;
     height: 7em;
     border-radius: 100%;
-    background: #0054D1;
+    background: #cb7169;
     position: relative;
     vertical-align: middle;
     margin-right: -3em;
