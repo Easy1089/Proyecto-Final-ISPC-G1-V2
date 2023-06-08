@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductoService } from 'src/app/service/producto.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-catalogo',
@@ -23,7 +24,6 @@ export class CatalogoComponent implements OnInit {
       }
     });
   }
-  
 }
 
 

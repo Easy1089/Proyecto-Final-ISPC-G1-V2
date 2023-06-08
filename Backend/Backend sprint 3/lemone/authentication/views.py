@@ -22,7 +22,6 @@ class LoginView(APIView):
         return Response(
             status=status.HTTP_404_NOT_FOUND)
 
-
 class LogoutView(APIView):
     def post(self, request):
         # Borramos de la request la información de sesión
@@ -34,3 +33,5 @@ class LogoutView(APIView):
 #Registro de usuarios 
 class SignupView(generics.CreateAPIView):
     serializer_class = UserSerializer
+
+
