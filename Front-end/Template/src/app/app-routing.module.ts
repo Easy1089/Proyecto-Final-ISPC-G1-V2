@@ -16,6 +16,10 @@ import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { UsuarioProfileComponent } from './components/usuario-profile/usuario-profile.component';
 import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/preguntas-frecuentes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { Pagina404Component } from './components/pagina404/pagina404.component';
+import { Pagina500Component } from './components/pagina500/pagina500.component';
+import { PurchaseComponent } from './components/purchase/purchase.component';
+import { AbmProductosComponent } from './components/abm-productos/abm-productos.component';
 import { AuthGuard } from './service/auth.guard';
 //Importo AuthGuard para poder validar si el usuario está logueado o no
 
@@ -31,9 +35,13 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'reset-pass', component: ResetPassComponent },
-  { path: 'usuarioprofile', component: UsuarioProfileComponent, canActivate: [AuthGuard] },
+  { path: 'error404', component: Pagina404Component },
+  { path: 'usuarioprofile', component: UsuarioProfileComponent, canActivate: [AuthGuard]},
   { path: 'preguntasfrecuentes', component: PreguntasFrecuentesComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'purchase', component: PurchaseComponent  },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  { path: 'error500', component: Pagina500Component },
+  { path: 'abmproductos', component: AbmProductosComponent },
   {path: 'descripcionproducto/:id', component: DescProductoComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: HomeComponent } // esta ruta captura cualquier otra ruta no definida

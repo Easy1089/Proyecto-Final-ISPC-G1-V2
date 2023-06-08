@@ -22,6 +22,10 @@ import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { UsuarioProfileComponent } from './components/usuario-profile/usuario-profile.component';
 import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/preguntas-frecuentes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { Pagina404Component } from './components/pagina404/pagina404.component';
+import { Pagina500Component } from './components/pagina500/pagina500.component';
+import { PurchaseComponent } from './components/purchase/purchase.component';
+import { AbmProductosComponent } from './components/abm-productos/abm-productos.component';
 import { JwtInterceptor } from './service/interceptor';
 import { ErrorInterceptor } from './service/error.interceptor';
 import { UsuarioService } from './service/usuario.service';
@@ -46,7 +50,11 @@ import { AuthService } from './service/auth.service';
     ResetPassComponent,
     UsuarioProfileComponent,
     PreguntasFrecuentesComponent,
-    DashboardComponent
+    DashboardComponent,
+    Pagina404Component,
+    Pagina500Component,
+    PurchaseComponent,
+    AbmProductosComponent
     
   ],
   imports: [

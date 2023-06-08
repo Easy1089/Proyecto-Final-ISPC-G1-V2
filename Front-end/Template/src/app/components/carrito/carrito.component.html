@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </head>
 <body>
-    <app-navbar></app-navbar>
+    
     <div class="container pb-5 mt-n2 mt-md-n3">
         <div class="row">
             <div class="col-xl-9 col-md-8">
@@ -144,35 +145,13 @@
                 <h2 class="h6 px-4 py-3 bg-secondary text-center">Subtotal</h2>
                 <div class="h3 font-weight-semibold text-center py-3">$325.00</div>
                 <hr>
-                <h3 class="h6 pt-4 font-weight-semibold"><span class="badge badge-success mr-2">Note</span>Additional comments</h3>
-                <textarea class="form-control mb-3" id="order-comments" rows="5"></textarea>
+                
                 <a class="btn btn-primary btn-block" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card mr-2">
                         <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
                         <line x1="1" y1="10" x2="23" y2="10"></line>
                     </svg>Proceed to Checkout</a>
-                <div class="pt-4">
-                    <div class="accordion" id="cart-accordion">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="accordion-heading font-weight-semibold"><a href="#promocode" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="promocode">Apply promo code<span class="accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></span></a></h3>
-                            </div>
-                            <div class="collapse show" id="promocode" data-parent="#cart-accordion">
-                                <div class="card-body">
-                                    <form class="needs-validation" novalidate="">
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" id="cart-promocode" placeholder="Promo code" required="">
-                                            <div class="invalid-feedback">Please provide a valid promo code!</div>
-                                        </div>
-                                        <button class="btn btn-outline-primary btn-block" type="submit">Apply promo code</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
