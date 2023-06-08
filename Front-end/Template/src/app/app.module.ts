@@ -24,6 +24,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { Pagina500Component } from './components/pagina500/pagina500.component';
 import { PurchaseComponent } from './components/purchase/purchase.component';
+import { AbmProductosComponent } from './components/abm-productos/abm-productos.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { PurchaseComponent } from './components/purchase/purchase.component';
     DashboardComponent,
     Pagina404Component,
     Pagina500Component,
-    PurchaseComponent
+    PurchaseComponent,
+    AbmProductosComponent
     
   ],
   imports: [

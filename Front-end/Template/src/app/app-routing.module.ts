@@ -19,6 +19,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { Pagina500Component } from './components/pagina500/pagina500.component';
 import { PurchaseComponent } from './components/purchase/purchase.component';
+import { AbmProductosComponent } from './components/abm-productos/abm-productos.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'purchase', component: PurchaseComponent  },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'error500', component: Pagina500Component },
+  { path: 'abmproductos', component: AbmProductosComponent },
   {path: 'descripcionproducto/:id', component: DescProductoComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: HomeComponent } // esta ruta captura cualquier otra ruta no definida
