@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Importa ReactiveFormsModule
-import { HttpClientModule } from '@angular/common/http';
+//Importo los interceptors
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -21,7 +22,14 @@ import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { UsuarioProfileComponent } from './components/usuario-profile/usuario-profile.component';
 import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/preguntas-frecuentes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-
+import { Pagina404Component } from './components/pagina404/pagina404.component';
+import { Pagina500Component } from './components/pagina500/pagina500.component';
+import { PurchaseComponent } from './components/purchase/purchase.component';
+import { AbmProductosComponent } from './components/abm-productos/abm-productos.component';
+import { JwtInterceptor } from './service/interceptor';
+import { ErrorInterceptor } from './service/error.interceptor';
+import { UsuarioService } from './service/usuario.service';
+import { AuthService } from './service/auth.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +50,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ResetPassComponent,
     UsuarioProfileComponent,
     PreguntasFrecuentesComponent,
-    DashboardComponent
+    DashboardComponent,
+    Pagina404Component,
+    Pagina500Component,
+    PurchaseComponent,
+    AbmProductosComponent
     
   ],
   imports: [
@@ -52,7 +64,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [UsuarioService,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
