@@ -2,10 +2,11 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 
 from authentication.models import CustomUser
-from .models import Producto
+from .models import Categoria, Producto
 from .serializers import ProductoSerializer, UsuarioSerializer
 from django.views import View
 from django.http import JsonResponse
+
 
 class ProductoView(APIView):
     def get(self, request, producto_id=None):
@@ -26,15 +27,45 @@ class ProductoView(APIView):
             except Producto.DoesNotExist:
                 datos = {'message': 'Producto no encontrado...'}
         return Response(datos)
-    
+
     def post(self, request):
-        pass
-    
+        # Obtener los datos del producto del cuerpo de la solicitud JSON
+        datos_producto = request.data
+
+        # Obtener la instancia de Categoria correspondiente al ID proporcionado
+        categoria_id = datos_producto['categoria']
+        categoria = Categoria.objects.get(id=categoria_id)
+
+        # Obtener la instancia de CustomUser correspondiente al nombre de usuario proporcionado
+        usuarioalta_id = datos_producto['usuarioalta_id']
+        usuarioalta = CustomUser.objects.get(id=usuarioalta_id)
+
+        # Crear el producto en la base de datos
+        producto = Producto.objects.create(
+            codigo=datos_producto['codigo'],
+            nombre=datos_producto['nombre'],
+            descripcion=datos_producto['descripcion'],
+            inventariominimo=datos_producto['inventariominimo'],
+            preciodecosto=datos_producto['preciodecosto'],
+            preciodeventa=datos_producto['preciodeventa'],
+            categoria=categoria,
+            activoactualmente=datos_producto['activoactualmente'],
+            imagen=datos_producto['imagen'],
+            estado=datos_producto['estado'],
+            usuarioalta=usuarioalta,
+            fechaalta=datos_producto['fechaalta'],
+            usuariomodificacion=None,
+            fehamodificacion=None
+        )
+        # Devolver una respuesta exitosa
+        return Response(datos_producto)
+
     def put(self, request):
         pass
-    
+
     def delete(self, request):
         pass
+
 
 class UsuariosView(APIView):
     def get(self, request):
@@ -45,4 +76,3 @@ class UsuariosView(APIView):
         else:
             datos = {'message': 'Usuarios no encontrados...'}
         return Response(datos)
-    
