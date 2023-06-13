@@ -36,7 +36,6 @@ export class RegisterComponent implements OnInit {
     {
       console.log("Enviando  al servidor...");
       console.log(usuario);
-      usuario.username == usuario.email;
 
       this.usuarioService.onCrearUsuario(usuario).subscribe(
         (response: Usuario) => {

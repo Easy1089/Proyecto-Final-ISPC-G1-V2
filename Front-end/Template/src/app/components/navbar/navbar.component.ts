@@ -11,8 +11,10 @@ import { AuthService } from 'src/app/service/auth.service';
   })
 
 export class NavbarComponent implements OnInit {
-  isLoggedIn: boolean;
+  isLoggedIn: boolean = false;
   currentUser: any;
+  esAdmin: boolean = false;
+  usuarioLogueado: boolean = false;
 
   constructor(private router: Router, private authService: AuthService) { 
     this.isLoggedIn = false;
@@ -20,8 +22,14 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.isLoggedIn = this.authService.currentUser != null;
+    this.isLoggedIn = this.authService.currentUser !== null;
+
+    this.authService.esAdmin().subscribe(admin => {
+      this.esAdmin = admin;
+    });
+
     this.currentUser = this.authService.currentUser;
+    //this.usuarioLogueado = this.currentUser.username !== undefined;
   }
   
   inicio(){

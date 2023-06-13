@@ -27,7 +27,7 @@
                 <form [formGroup]="form" (ngSubmit)="onEnviar($event, usuario)">
                   <div class="form-outline mb-4">
                     <input type="text" id="nombre" class="form-control form-control-lg" formControlName="nombre"
-                      [(ngModel)]="usuario.nombre" />
+                      [(ngModel)]="usuario.first_name" />
                     <label class="form-label" for="form3Example1cg">Nombre</label>
                     <div
                       *ngIf="form.get('nombre')?.invalid && (form.get('nombre')?.dirty || form.get('nombre')?.touched)"
@@ -40,7 +40,7 @@
 
                   <div class="form-outline mb-4">
                     <input type="text" id="apellido" class="form-control form-control-lg" formControlName="apellido"
-                      [(ngModel)]="usuario.apellido" />
+                      [(ngModel)]="usuario.last_name" />
                     <label class="form-label" for="form3Example1cg">Apellido</label>
                     <div
                       *ngIf="form.get('apellido')?.invalid && (form.get('apellido')?.dirty || form.get('apellido')?.touched)"

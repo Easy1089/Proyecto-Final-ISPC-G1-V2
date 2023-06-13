@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import LoginView, LogoutView, SignupView
+from .views import CustomUserCreateAPIView, LoginView, LogoutView
 
 urlpatterns = [
     # Auth views
@@ -8,10 +8,9 @@ urlpatterns = [
 
     path('auth/logout/',
          LogoutView.as_view(), name='auth_logout'),
-    
-    path('auth/signup/',
-         SignupView.as_view(), name='auth_signup'),
-     
+
+    path('auth/signup/', CustomUserCreateAPIView.as_view(), name='auth_signup'),
+
     path('auth/reset/',
          include('django_rest_passwordreset.urls',
                  namespace='password_reset')),

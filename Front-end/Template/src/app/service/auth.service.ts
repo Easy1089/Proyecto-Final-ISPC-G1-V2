@@ -37,6 +37,18 @@ export class AuthService {
     
   }
 
+  esAdmin(): Observable<boolean> {
+    return this.currentUserSubject.pipe(
+      map((usuario: Usuario) => usuario.is_superuser)
+    );
+  }
+
+  usuarioLogueado(): Observable<number> {
+    return this.currentUserSubject.pipe(
+      map((usuario: Usuario) => usuario.id)
+    );
+  }
+
   get usuarioAutenticado(): Usuario {
     return this.currentUserSubject.value;
   }

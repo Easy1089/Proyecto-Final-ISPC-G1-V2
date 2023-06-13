@@ -30,7 +30,11 @@
 
 <body>
   <div *ngIf="isLoggedIn">
-    Bienvenido, {{ currentUser.email }}
+    <h5>Bienvenido {{ currentUser.username }}</h5>
+  </div>
+
+  <div *ngIf="esAdmin">
+    <h5>Bienvenido, Administrador</h5>
   </div>
   <div>
     <router-outlet></router-outlet>
