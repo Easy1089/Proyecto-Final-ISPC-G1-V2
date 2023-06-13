@@ -302,6 +302,7 @@ h2 {
     padding: 5px 40px 5px 40px;
     font-size: 1rem
   }
+ 
 }
 
 .disclaimer {
@@ -323,11 +324,7 @@ footer {
 /* Contacto--------------------------------------------- */
 
 
-#textocontacto{
-  
-  align-items: center;
-  text-align: center;
-}
+
 
 
 
