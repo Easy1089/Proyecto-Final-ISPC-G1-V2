@@ -48,11 +48,19 @@
       <li><button (click)="contacto()">Contacto</button></li>
     </ul>
     <div class="nav-right">
-      <button (click)="login()"><i class="fa fa-user"></i> Login</button>
-      <button (click)="register()"><i class="fa fa-user-plus"></i> Register</button>
+      <div *ngIf="isLoggedIn">
+        <button (click)="profile()"><i class="fa fa-user-circle-o" aria-hidden="true"></i></button>
+        <button (click)="logout()"><i class="fa fa-user"></i> Logout</button>
+        
+      </div>
+      <div *ngIf="!isLoggedIn">
+        <button (click)="login()"><i class="fa fa-user"></i> Login</button>
+        <button (click)="register()"><i class="fa fa-user-plus"></i> Register</button>
+      </div>
       <button (click)="carrito()"><i class="fa fa-shopping-cart"></i></button>
     </div>
   </nav>
+  
 </body>
 
 </html>
