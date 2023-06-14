@@ -50,12 +50,12 @@
     <div class="nav-right">
       <div *ngIf="isLoggedIn">
         <button (click)="profile()"><i class="fa fa-user-circle-o" aria-hidden="true"></i></button>
-        <button (click)="logout($event, this.currentUser)"><i class="fa fa-user"></i> Logout</button>
+        <button (click)="logout($event)"><i class="fa fa-user"></i> Logout</button>
         <div *ngIf="errorMensaje" class="error-message">{{ errorMensaje }}</div>
       </div>
       <div *ngIf="!isLoggedIn">
         <button (click)="login()"><i class="fa fa-user"></i> Login</button>
-        <button (click)="register()"><i class="fa fa-user-plus"></i> Regitro</button>
+        <button (click)="register()"><i class="fa fa-user-plus"></i> Registro</button>
       </div>
       <button (click)="carrito()"><i class="fa fa-shopping-cart"></i></button>
     </div>

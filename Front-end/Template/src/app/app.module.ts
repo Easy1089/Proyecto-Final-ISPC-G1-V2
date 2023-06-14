@@ -26,10 +26,12 @@ import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { Pagina500Component } from './components/pagina500/pagina500.component';
 import { PurchaseComponent } from './components/purchase/purchase.component';
 import { AbmProductosComponent } from './components/abm-productos/abm-productos.component';
-import { JwtInterceptor } from './interceptors/interceptor';
+import { JwtInterceptor } from './service/interceptor';
+import { ErrorInterceptor } from './service/error.interceptor';
 import { UsuarioService } from './service/usuario.service';
 import { AuthService } from './service/auth.service';
 import { ErrorHttpInterceptor } from './interceptors/errorhttp.interceptor';
+import { AuthGuard } from './service/auth.guard';
 
 
 @NgModule({
@@ -67,8 +69,10 @@ import { ErrorHttpInterceptor } from './interceptors/errorhttp.interceptor';
   ],
   providers: [UsuarioService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorHttpInterceptor, multi: true },
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

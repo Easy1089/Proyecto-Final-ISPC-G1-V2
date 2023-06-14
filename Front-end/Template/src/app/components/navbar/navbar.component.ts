@@ -18,15 +18,13 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.currentUser.subscribe(user => {
-      this.isLoggedIn = user !== null;
       this.currentUser = user;
+      this.isLoggedIn = user !== null;
     });
-    
+
     this.authService.esAdmin().subscribe(admin => {
       this.esAdmin = admin;
     });
-
-    this.currentUser = this.authService.currentUser;
   }
 
   inicio() {
@@ -56,26 +54,34 @@ export class NavbarComponent implements OnInit {
   carrito() {
     this.router.navigate(['/checkout']);
   }
+  
   profile() {
     this.router.navigate(['/usuarioprofile']);
   }
 
-  logout(event: Event, usuario:Usuario): void {  
-    event.preventDefault(); // Evita el comportamiento predeterminado del enlace o botón
-    
+  ambproductos() {
+    this.router.navigate(['/abmproductos']);
+  }
+
+  logout(event: Event): void {
+    event.preventDefault();
+  
     if (this.currentUser) {
-      this.authService.logout(this.currentUser).subscribe(
-        () => {
-          this.router.navigate(['/home']);
-          location.reload(); // Forzar el refresco de la página
+      console.log("Llamando al deslogueo desde navbar.")
+      this.authService.logout(this.currentUser).subscribe({
+        next: (data) => {
+          this.router.navigate(['/home']);  
+          this.currentUser = null; // Establecer el usuario actual como null
+          this.errorMensaje = null; // Limpiar el mensaje de error
+          //location.reload(); // Forzar el refresco de la página
         },
-        error => {
+        error: (error) => {
           console.error("Error al cerrar sesión:", error);
           this.errorMensaje = 'Ocurrió un error al cerrar sesión. Por favor, inténtalo de nuevo más tarde.';
         }
-      );
+      });
     } else {
       console.warn("No hay usuario actualmente logueado.");
     }
-  }
+  }  
 }
