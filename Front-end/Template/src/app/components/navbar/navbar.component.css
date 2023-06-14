@@ -57,4 +57,9 @@ button:hover {
     margin-left: 8;
     margin-right: 5px;
   }
+
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
 }
