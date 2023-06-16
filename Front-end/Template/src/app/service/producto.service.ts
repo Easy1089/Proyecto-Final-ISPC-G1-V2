@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Producto } from '../models/Producto';
+import { Categoria } from '../models/Categoria';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,7 @@ import { Producto } from '../models/Producto';
 export class ProductoService {
   url: string = "http://127.0.0.1:8000";
   urlProductos = `${this.url}/api/productos`;
+  urlCategorias = `${this.url}/api/categorias`;
   urlProductoId = `${this.url}/api/api/productos`;
 
   constructor(private http: HttpClient) { }
@@ -20,14 +22,22 @@ export class ProductoService {
     );
   }
 
+  ObtenerCategorias(): Observable<any> {
+    console.log("Get de categorías...")
+    return this.http.get<any[]>(this.urlCategorias).pipe(
+      catchError(this.handleError)
+    );
+  }
+
   ObtenerProductoPorId(id: number): Observable<any> {
     return this.http.get<any[]>(`${this.urlProductoId}/${id}`).pipe(
       catchError(this.handleError)
     );
   }
 
-  onCrearProducto(producto: Producto): Observable<Producto> {
-    return this.http.post<Producto>(`${this.url}/api/productos`, producto).pipe(
+  onCrearProducto(producto: Producto, usuario: any): Observable<Producto> {
+    const body = { producto, usuario };
+    return this.http.post<Producto>(`${this.url}/api/productos/`, body).pipe(
       catchError(this.handleError)
     );
   }

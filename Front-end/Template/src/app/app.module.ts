@@ -32,6 +32,8 @@ import { UsuarioService } from './service/usuario.service';
 import { AuthService } from './service/auth.service';
 import { ErrorHttpInterceptor } from './interceptors/errorhttp.interceptor';
 import { AuthGuard } from './service/auth.guard';
+import { EstadoProductoDirective } from './directivas/estado-producto.directive';
+import { ProductoFormComponent } from './components/producto-form/producto-form.component';
 
 
 @NgModule({
@@ -57,7 +59,9 @@ import { AuthGuard } from './service/auth.guard';
     Pagina404Component,
     Pagina500Component,
     PurchaseComponent,
-    AbmProductosComponent
+    AbmProductosComponent,
+    EstadoProductoDirective,
+    ProductoFormComponent
     
   ],
   imports: [
