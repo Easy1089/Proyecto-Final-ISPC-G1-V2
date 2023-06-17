@@ -9,6 +9,7 @@
         <div class="product" *ngFor="let product of productos">
             <app-producto [product]="product"></app-producto>
         </div>
+        <div *ngIf="errorMensaje" class="error-message">{{ errorMensaje }}</div>
     </div>
 </div>
 <app-footer></app-footer>

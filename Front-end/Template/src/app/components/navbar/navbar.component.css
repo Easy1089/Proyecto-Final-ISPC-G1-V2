@@ -53,8 +53,9 @@ button:hover {
     justify-content: center;
   }
 
-  .fa {
-    margin-left: 8;
-    margin-right: 5px;
+
+  .error-message {
+    color: red;
+    margin-top: 10px;
   }
 }

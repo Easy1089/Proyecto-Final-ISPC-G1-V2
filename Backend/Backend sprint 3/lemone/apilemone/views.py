@@ -1,9 +1,9 @@
+from datetime import date
 from rest_framework.views import APIView
 from rest_framework.response import Response
-
 from authentication.models import CustomUser
 from .models import Categoria, Producto
-from .serializers import ProductoSerializer, UsuarioSerializer
+from .serializers import CategoriaSerializer, ProductoSerializer, UsuarioSerializer
 from django.views import View
 from django.http import JsonResponse
 
@@ -30,15 +30,16 @@ class ProductoView(APIView):
 
     def post(self, request):
         # Obtener los datos del producto del cuerpo de la solicitud JSON
-        datos_producto = request.data
+        datos = request.data
+        datos_producto = datos.get('producto')
+        usuario = datos.get('usuario')
 
         # Obtener la instancia de Categoria correspondiente al ID proporcionado
         categoria_id = datos_producto['categoria']
         categoria = Categoria.objects.get(id=categoria_id)
 
         # Obtener la instancia de CustomUser correspondiente al nombre de usuario proporcionado
-        usuarioalta_id = datos_producto['usuarioalta_id']
-        usuarioalta = CustomUser.objects.get(id=usuarioalta_id)
+        usuarioalta = CustomUser.objects.get(id=usuario['id'])
 
         # Crear el producto en la base de datos
         producto = Producto.objects.create(
@@ -53,7 +54,7 @@ class ProductoView(APIView):
             imagen=datos_producto['imagen'],
             estado=datos_producto['estado'],
             usuarioalta=usuarioalta,
-            fechaalta=datos_producto['fechaalta'],
+            fechaalta=date.today(),
             usuariomodificacion=None,
             fehamodificacion=None
         )
@@ -75,4 +76,15 @@ class UsuariosView(APIView):
             datos = {'message': 'Success', 'usuarios': serializer.data}
         else:
             datos = {'message': 'Usuarios no encontrados...'}
+        return Response(datos)
+
+
+class CategoriaView(APIView):
+    def get(self, request):
+        categorias = Categoria.objects.all()
+        serializer = CategoriaSerializer(categorias, many=True)
+        if len(serializer.data) > 0:
+            datos = {'message': 'Success', 'categorias': serializer.data}
+        else:
+            datos = {'message': 'Categorías no encontradas...'}
         return Response(datos)

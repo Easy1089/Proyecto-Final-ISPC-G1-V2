@@ -30,6 +30,11 @@ import { JwtInterceptor } from './service/interceptor';
 import { ErrorInterceptor } from './service/error.interceptor';
 import { UsuarioService } from './service/usuario.service';
 import { AuthService } from './service/auth.service';
+import { ErrorHttpInterceptor } from './interceptors/errorhttp.interceptor';
+import { AuthGuard } from './service/auth.guard';
+import { EstadoProductoDirective } from './directivas/estado-producto.directive';
+import { ProductoFormComponent } from './components/producto-form/producto-form.component';
+
 
 @NgModule({
   declarations: [
@@ -54,7 +59,9 @@ import { AuthService } from './service/auth.service';
     Pagina404Component,
     Pagina500Component,
     PurchaseComponent,
-    AbmProductosComponent
+    AbmProductosComponent,
+    EstadoProductoDirective,
+    ProductoFormComponent
     
   ],
   imports: [
@@ -67,7 +74,9 @@ import { AuthService } from './service/auth.service';
   providers: [UsuarioService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    AuthService
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorHttpInterceptor, multi: true },
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

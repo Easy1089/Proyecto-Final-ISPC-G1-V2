@@ -20,6 +20,7 @@ import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { Pagina500Component } from './components/pagina500/pagina500.component';
 import { PurchaseComponent } from './components/purchase/purchase.component';
 import { AbmProductosComponent } from './components/abm-productos/abm-productos.component';
+import { ProductoFormComponent } from './components/producto-form/producto-form.component';
 import { AuthGuard } from './service/auth.guard';
 //Importo AuthGuard para poder validar si el usuario está logueado o no
 
@@ -31,17 +32,18 @@ const routes: Routes = [
   { path: 'about-me', component: AboutMeComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'miembroequipo', component: MiembroequipoComponent },
-  { path: 'checkout', component: CarritoComponent, canActivate: [AuthGuard] },
+  { path: 'checkout', component: CarritoComponent,  },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'reset-pass', component: ResetPassComponent },
   { path: 'error404', component: Pagina404Component },
-  { path: 'usuarioprofile', component: UsuarioProfileComponent, canActivate: [AuthGuard]},
+  { path: 'usuarioprofile', component: UsuarioProfileComponent, canActivate: [AuthGuard] },
   { path: 'preguntasfrecuentes', component: PreguntasFrecuentesComponent },
-  { path: 'purchase', component: PurchaseComponent  },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  { path: 'purchase', component: PurchaseComponent  , canActivate: [AuthGuard]},
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'error500', component: Pagina500Component },
-  { path: 'abmproductos', component: AbmProductosComponent },
+  { path: 'abmproductos', component: AbmProductosComponent, canActivate: [AuthGuard]},
+  { path: 'producto-form', component: ProductoFormComponent},
   {path: 'descripcionproducto/:id', component: DescProductoComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: HomeComponent } // esta ruta captura cualquier otra ruta no definida

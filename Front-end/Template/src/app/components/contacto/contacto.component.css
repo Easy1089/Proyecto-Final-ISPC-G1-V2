@@ -1,11 +1,17 @@
 body{
-    background: -webkit-linear-gradient(left, #771731, #993b58);
+    background: -webkit-linear-gradient(left, #420213, #993b58);
+    background-image: url('../../../assets/img/contacto/fondo.jpg');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    
 }
 .contact-form{
-    background: #fff;
+    background: #ffffff;
     margin-top: 10%;
     margin-bottom: 5%;
     width: 70%;
+    border-radius: 15%;
+    
 }
 .contact-form .form-control{
     border-radius:1rem;
@@ -36,7 +42,7 @@ body{
     border: none;
     border-radius: 1rem;
     padding: 1.5%;
-    background: #0062cc;
+    background: #771731;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
@@ -47,7 +53,7 @@ body{
     border-radius: 1rem;
     padding: 1.5%;
     color: #fff;
-    background-color: #0062cc;
+    background-color: #771731;
     border: none;
     cursor: pointer;
 }

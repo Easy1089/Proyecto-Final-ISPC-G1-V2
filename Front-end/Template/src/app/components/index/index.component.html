@@ -39,7 +39,26 @@
 <body>
 <div class="inicio">
   <div class="contenedor">
-    <img src="../../../assets/img/index/Vino final copia.png" alt="Descripción de la imagen">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src=" ../../../assets/img/index/Vino final copia.png" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="../../../assets/img/index/slide1.png" class="d-block w-100" alt="Slide 2">
+        </div>
+      </div>
+  
+      <!-- Controles del carrusel -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
     <div class="texto">
       <h2>Bienvenidos a Lemone</h2>
       <p>Los mejores vinos de Córdoba</p>
@@ -58,12 +77,10 @@
               src="../../../assets/img/index/producto-base.png"
               class="card-img-top" alt="...">
             <div class="card-body">
-              <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">&dollar;1235</span>
+              <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">SuperVino 1</span>
             </div>
-              <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut
-                eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium
-                sed aliquam sequi.</h5>
-              <div class="text-center my-4"> <button (click)="catalogo();scrollToTop()" class="btn btn-warning">Ver producto</button> </div>
+              <h5 class="card-title">El Chardonnay es un vino blanco seco y elegante que se produce en muchas regiones.</h5>
+              <div class="text-center my-4"> <button (click)="catalogo();scrollToTop()" class="btn btn-warning">Ver Catalogo</button> </div>
             </div>
           </div>
         </div>
@@ -72,12 +89,10 @@
               src="../../../assets/img/index/producto-base.png"
               class="card-img-top" alt="...">
             <div class="card-body">
-              <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">&dollar;1235</span>
+              <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">SuperVino 2</span>
             </div>
-              <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut
-                eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium
-                sed aliquam sequi.</h5>
-              <div class="text-center gap-2 my-4"> <button (click)="catalogo();scrollToTop()" class="btn btn-warning">Ver producto</button> </div>
+              <h5 class="card-title">El Malbec es un vino tinto de origen francés que ha ganado reconocimiento mundial.</h5>
+              <div class="text-center gap-2 my-4"> <button (click)="catalogo();scrollToTop()" class="btn btn-warning">Ver Catalogo</button> </div>
             </div>
           </div>
         </div>
@@ -85,14 +100,12 @@
           <div class="card h-100 shadow-sm"> <img
               src="../../../assets/img/index/producto-base.png"
               class="card-img-top" alt="...">
-            <div class="label-top shadow-sm">20%OFF</div>
+            
             <div class="card-body">
-              <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">&dollar;1235</span>
+              <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">SuperVino 3</span>
             </div>
-              <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut
-                eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium
-                sed aliquam sequi.</h5>
-              <div class="text-center my-4"> <button (click)="catalogo();scrollToTop()" class="btn btn-warning">Ver producto</button> </div>
+              <h5 class="card-title">El Cabernet Sauvignon es un vino tinto de cuerpo completo y robusto.</h5>
+              <div class="text-center my-4"> <button (click)="catalogo();scrollToTop()" class="btn btn-warning">Ver Catalogo</button> </div>
               <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span
                   class="float-end"><i class="fas fa-plus"></i></span> </div>
             </div>
@@ -104,12 +117,10 @@
               class="card-img-top" alt="...">
             <div class="label-top shadow-sm">15%OFF</div>
             <div class="card-body">
-              <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">&dollar;1235</span>
+              <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">Supervino4</span>
             </div>
-              <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut
-                eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium
-                sed aliquam sequi.</h5>
-              <div class="text-center my-4"> <button (click)="catalogo();scrollToTop()" class="btn btn-warning">Ver producto</button> </div>
+              <h5 class="card-title">El Prosecco es un vino espumoso italiano muy popular y refrescante. </h5>
+              <div class="text-center my-4"> <button (click)="catalogo();scrollToTop()" class="btn btn-warning">Ver Catalogo</button> </div>
               <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span
                   class="float-end"><i class="fas fa-plus"></i></span> </div>
             </div>
@@ -121,17 +132,88 @@
 
   <!-- Contacto ---------------------------------->
   
-  <div class="contenedor-contacto">
-    <img src="../../../assets/img/index/Contactanos.png" alt="Descripción de la imagen">
-    <div class="texto">
-      <h2>Para atención personalizada...</h2>
-      <button class="" (click)="contactos()">Contáctanos</button>
+  <div class="contenedor">
+    <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../../../assets/img/index/Contactanos.png" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="../../../assets/img/index/CATALOGO.png" class="d-block w-100" alt="Slide 2">
+        </div>
+      </div>
+  
+      <div id="textocontacto" class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="responsive-text">
+              <h2>Contactanos para una atencion personalizada.</h2>
+            </div>
+          </div>
+          <div class="col-12 text-center">
+            <button style="background-color:#590829;" class="btn btn-primary btn-lg" onclick="contactos()">Contáctanos</button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Controles del carrusel -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
     </div>
   </div>
+  
+  
+  
+  
+  
 
 
 
   <!-- Testimonios ------------------------------>
+  <div class="container">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-caption">
+             
+              <img src="https://i.imgur.com/lE89Aey.jpg">
+              <div id="image-caption">Nick Doe</div>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption">
+              
+                <img src="https://i.imgur.com/QptVdsp.jpg" class="img-fluid">
+                <div id="image-caption">Cromption Greves</div>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption">
+                <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid">
+                <div id="image-caption">Harry Mon</div>
+            </div>   
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <i class='fas fa-arrow-left'></i>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <i class='fas fa-arrow-right'></i>
+        </a>
+      </div>
+      
+</div>
+
+
+
+
+
   <h1 class="titulo">Testimonios</h1>
   <section>
     <div class="row d-flex justify-content-center">
