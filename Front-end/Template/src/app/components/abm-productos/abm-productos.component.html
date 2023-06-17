@@ -162,10 +162,13 @@
                             </span>
                         </td>
                         <td class="text-end">
-                            <a href="#" class="btn btn-sm btn-neutral">View</a>
+                            <!--<a href="#" class="btn btn-sm btn-neutral">View</a>-->
+                            <a class="btn btn-sm btn-primary"
+                                [routerLink]="['/producto-form', { id: product.id, editar: true } ]">Editar</a>
                             <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
                                 <i class="bi bi-trash"></i>
                             </button>
+
                         </td>
                     </tr>
                 </tbody>

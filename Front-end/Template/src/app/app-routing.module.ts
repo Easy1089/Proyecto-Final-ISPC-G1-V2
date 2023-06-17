@@ -44,6 +44,7 @@ const routes: Routes = [
   { path: 'error500', component: Pagina500Component },
   { path: 'abmproductos', component: AbmProductosComponent, canActivate: [AuthGuard]},
   { path: 'producto-form', component: ProductoFormComponent},
+  { path: 'producto-form/:id', component: ProductoFormComponent },
   {path: 'descripcionproducto/:id', component: DescProductoComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: HomeComponent } // esta ruta captura cualquier otra ruta no definida

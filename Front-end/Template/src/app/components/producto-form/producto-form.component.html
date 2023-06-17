@@ -1,6 +1,7 @@
 <app-navbar></app-navbar>
-<div class="container">
+<div *ngIf="!mostrarFormularioEdicion">
     <form [formGroup]="productoForm" (ngSubmit)="guardarProducto()">
+        <h3>Formulario de alta</h3>
         <div class="form-group">
             <label for="codigo">Código</label>
             <input type="text" id="codigo" formControlName="codigo" class="form-control" required>
@@ -45,4 +46,59 @@
         <button type="submit" class="btn btn-primary">Guardar</button>
     </form>
 </div>
+<div *ngIf="mostrarFormularioEdicion">
+    <h3>Formulario de Edición</h3>
+    <form [formGroup]="formularioEdicion" (ngSubmit)="actualizarProducto(productoActual)">
+        <div class="form-group">
+            <label for="codigo">Código</label>
+            <input type="text" id="codigo" formControlName="codigo" class="form-control" required
+                formControlName="codigo" formControlName="codigo">
+        </div>
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" formControlName="nombre" class="form-control" required
+                formControlName="nombre">
+        </div>
+        <div class="form-group">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" formControlName="descripcion" class="form-control" required
+                formControlName="descripcion"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="inventariominimo">Inventario Mínimo</label>
+            <input type="number" id="inventariominimo" formControlName="inventariominimo" class="form-control"
+                formControlName="inventariominimo" required>
+        </div>
+        <div class="form-group">
+            <label for="preciodecosto">Precio de Costo</label>
+            <input type="number" id="preciodecosto" formControlName="preciodecosto" class="form-control" required
+                formControlName="preciodecosto">
+        </div>
+        <div class="form-group">
+            <label for="preciodeventa">Precio de Venta</label>
+            <input type="number" id="preciodeventa" formControlName="preciodeventa" class="form-control" required
+                formControlName="preciodeventa">
+        </div>
+        <div class="form-group">
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" formControlName="categoria">
+                <option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.nombre }}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="activoactualmente">Estado</label>
+            <select id="activoactualmente" formControlName="activoactualmente" class="form-control"
+                formControlName="activoactualmente" required>
+                <option [value]="true">Activado</option>
+                <option [value]="false">Desactivado</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="imagen">Imagen</label>
+            <input type="text" id="imagen" formControlName="imagen" class="form-control" formControlName="imagen">
+        </div>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+    </form>
+</div>
+
 <app-footer></app-footer>

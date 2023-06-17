@@ -37,7 +37,14 @@ export class ProductoService {
 
   onCrearProducto(producto: Producto, usuario: any): Observable<Producto> {
     const body = { producto, usuario };
-    return this.http.post<Producto>(`${this.url}/api/productos/`, body).pipe(
+    return this.http.post<Producto>(`${this.urlProductos}/`, body).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  onActualizarProducto(producto: Producto, usuario: any): Observable<Producto> {
+    const body = { producto, usuario };
+    return this.http.put<any>(`${this.urlProductoId}/${producto.id}`, body).pipe(
       catchError(this.handleError)
     );
   }

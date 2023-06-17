@@ -55,14 +55,50 @@ class ProductoView(APIView):
             estado=datos_producto['estado'],
             usuarioalta=usuarioalta,
             fechaalta=date.today(),
-            usuariomodificacion=None,
-            fehamodificacion=None
+            usuariomodificacion=usuarioalta,
+            fehamodificacion=date.today()
         )
         # Devolver una respuesta exitosa
         return Response(datos_producto)
 
-    def put(self, request):
-        pass
+    def put(self, request, producto_id=None):
+        try:
+            producto = Producto.objects.get(id=producto_id)
+        except Producto.DoesNotExist:
+            datos = {'message': 'Producto no encontrado...'}
+            return Response(datos, status=status.HTTP_404_NOT_FOUND)
+
+        datos = request.data
+
+        datos_producto = request.data.get('producto')
+        usuario = datos.get('usuario')
+        usuariomodificacion = CustomUser.objects.get(id=usuario['id'])
+
+        categoria_id = datos_producto.get('categoria')
+
+        try:
+            categoria = Categoria.objects.get(id=categoria_id)
+        except Categoria.DoesNotExist:
+            datos = {'message': 'Categoría no encontrada...'}
+            return Response(datos, status=status.HTTP_404_NOT_FOUND)
+
+        producto.codigo = datos_producto.get('codigo')
+        producto.nombre = datos_producto.get('nombre')
+        producto.descripcion = datos_producto.get('descripcion')
+        producto.inventariominimo = datos_producto.get('inventariominimo')
+        producto.preciodecosto = datos_producto.get('preciodecosto')
+        producto.preciodeventa = datos_producto.get('preciodeventa')
+        producto.categoria = categoria
+        producto.activoactualmente = datos_producto.get('activoactualmente')
+        producto.imagen = datos_producto.get('imagen')
+        producto.usuariomodificacion = usuariomodificacion
+        producto.fechamodificacion = date.today()
+        producto.save()
+
+        serializer = ProductoSerializer(producto)
+        datos = {'message': 'Producto actualizado exitosamente',
+                 'producto': serializer.data}
+        return Response(datos, status=status.HTTP_200_OK)
 
     def delete(self, request):
         pass
