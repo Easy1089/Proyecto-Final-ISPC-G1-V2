@@ -11,7 +11,7 @@ export class DescProductoComponent implements OnInit {
   id:number=0;
   product: any;
 
-  constructor(private route: ActivatedRoute, private producto: ProductoService){
+  constructor(private route: ActivatedRoute, private productoServ: ProductoService){
   }
 
   ngOnInit() {
@@ -19,7 +19,7 @@ export class DescProductoComponent implements OnInit {
       this.id = +params['id'];
     });
 
-    this.producto.ObtenerProductoPorId(this.id).subscribe({
+    this.productoServ.ObtenerProductoPorId(this.id).subscribe({
       next: (productoData: any) => {
         console.log(productoData.producto);
         this.product=productoData.producto
