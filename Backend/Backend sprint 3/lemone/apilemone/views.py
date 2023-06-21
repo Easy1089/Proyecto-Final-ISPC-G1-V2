@@ -105,13 +105,23 @@ class ProductoView(APIView):
 
 
 class UsuariosView(APIView):
-    def get(self, request):
-        usuarios = CustomUser.objects.all()
-        serializer = UsuarioSerializer(usuarios, many=True)
-        if len(serializer.data) > 0:
-            datos = {'message': 'Success', 'usuarios': serializer.data}
+     def get(self, request, usuario_id=None):
+        if usuario_id is None:
+            # Obtener todos los usuarios
+            usuarios = CustomUser.objects.all()
+            serializer = UsuarioSerializer(usuarios, many=True)
+            if len(serializer.data) > 0:
+                datos = {'message': 'Success', 'usuarios': serializer.data}
+            else:
+                datos = {'message': 'Usuarios no encontrados...'}
         else:
-            datos = {'message': 'Usuarios no encontrados...'}
+            # Obtener un Usuario específico por ID
+            try:
+                usuario = CustomUser.objects.get(id=usuario_id)
+                serializer = UsuarioSerializer(usuario)
+                datos = {'message': 'Success', 'usuario': serializer.data}
+            except Producto.DoesNotExist:
+                datos = {'message': 'Usuario no encontrado...'}
         return Response(datos)
 
 

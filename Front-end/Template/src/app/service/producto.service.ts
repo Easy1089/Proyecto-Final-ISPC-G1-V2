@@ -12,7 +12,7 @@ export class ProductoService {
   url: string = "http://127.0.0.1:8000";
   urlProductos = `${this.url}/api/productos`;
   urlCategorias = `${this.url}/api/categorias`;
-  urlProductoId = `${this.url}/api/api/productos`;
+  urlProductoId = `${this.url}/api/productos`;
 
   constructor(private http: HttpClient) { }
 
