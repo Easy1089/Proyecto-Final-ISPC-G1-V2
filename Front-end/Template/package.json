@@ -2,8 +2,9 @@
   "name": "lemone",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve --proxyConfig proxy.conf.json",
+    "ng": "ng", 
+    "start": "ng serve", 
+    "__comentario__": "ng serve --proxyConfig proxy.conf.json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
