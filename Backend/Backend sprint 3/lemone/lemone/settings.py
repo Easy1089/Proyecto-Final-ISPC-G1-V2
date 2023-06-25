@@ -37,14 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',    
+    'django.contrib.staticfiles',
     # Django custom apps
     'authentication',
     'apilemone',
-     # Django external apps
+    # Django external apps
     'rest_framework',
-    'django_rest_passwordreset',  
-    'corsheaders',  
+    'django_rest_passwordreset',
+    'corsheaders',
 ]
 
 # Custom user model
@@ -61,6 +61,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'http://localhost:4200'
+]
+
+ALLOWED_HOSTS = ['192.168.0.20', '127.0.0.1', '190.113.171.154']
 # Configuración de CORS
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -92,7 +99,7 @@ DATABASES = {
     'sqlite': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        },
+    },
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'lemone',
@@ -101,7 +108,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
-        'sql_mode': 'traditional',
+            'sql_mode': 'traditional',
         }
     }
 }
